@@ -82,23 +82,23 @@
     "services": [
         {
             "id": "1",
-            "title": "Art Direction",
-            "description": "We help with the creation and development of online advertising ideas, with particular focus on their visual appearance."
+            "title": "Software Development",
+            "description": "Crafting high-performance, scalable software tailored to your business needs. From concept to deployment, I build reliable and efficient solutions that drive growth."
         },
         {
             "id": "2",
-            "title": "Branding",
-            "description": "We design key brand elements such as the logo, color scheme, typography, and other design components that makes your brand stand out from competitors."
+            "title": "No Code MVP Development",
+            "description": "Bring your ideas to life faster with no code. I create functional, scalable MVPs that allow you to validate your concept and reach the market in record time."
         },
         {
             "id": "3",
-            "title": "Web Design",
-            "description": "We build and optimize your online presence.  Website is the digital entry point into your business and a powerful revenue channel."
+            "title": "System Design",
+            "description": "Designing robust, scalable systems that meet your business needs. I architect solutions that are built to last, ensuring performance, security, and flexibility."
         },
         {
             "id": "4",
-            "title": "3D Design",
-            "description": "We combine creative design and technical skills to build striking 3D visualisations that bring your project to life."
+            "title": "Fractional CTO",
+            "description": "Get C-level tech leadership on demand. I help you strategize, scale, and optimize your tech operations, driving your business forward without the full-time commitment."
         }
     ],
     "aboutpara": "At respond.io, a $10M ARR company, I led the redefinition of business messaging across platforms. I developed cloud infrastructures using microservices and serverless AWS, processing 5M incoming and 8M outgoing messages daily. I improved workflow execution speed by 20%, reduced response times from 700ms to 100ms, and optimized code to reduce AWS Lambda costs by 35%. Previously, at Nimblebot ($1M ARR), I led a tech team of 10 in creating impactful digital products. I specialize in scalable web and mobile solutions, delivering results for projects used by thousands of companies globally.",
