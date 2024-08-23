@@ -103,45 +103,116 @@
     ],
     "aboutpara": "At respond.io, a $10M ARR company, I led the redefinition of business messaging across platforms. I developed cloud infrastructures using microservices and serverless AWS, processing 5M incoming and 8M outgoing messages daily. I improved workflow execution speed by 20%, reduced response times from 700ms to 100ms, and optimized code to reduce AWS Lambda costs by 35%. Previously, at Nimblebot ($1M ARR), I led a tech team of 10 in creating impactful digital products. I specialize in scalable web and mobile solutions, delivering results for projects used by thousands of companies globally.",
     "resume": {
-        "tagline": "👋  I'm a software engineer, product designer.",
-        "description": "I have delivered world-class user experiences to millions of people. Well-versed with React, Javascript, and most of the Web frameworks.",
+        "tagline": "👋  I'm a software engineer, tech enthusiast.",
+        "description": "At respond.io, a $10M ARR company, I led the redefinition of business messaging across platforms. I developed cloud infrastructures using microservices and serverless AWS, processing 5M incoming and 8M outgoing messages daily. I improved workflow execution speed by 20%, reduced response times from 700ms to 100ms, and optimized code to reduce AWS Lambda costs by 35%. Previously, at Nimblebot ($1M ARR), I led a tech team of 10 in creating impactful digital products. I specialize in scalable web and mobile solutions, delivering results for projects used by thousands of companies globally.",
         "experiences": [
             {
                 "id": "1",
-                "dates": "March 2022 - Present",
+                "dates": "Nov 2023 - Present",
                 "type": "Full Time",
-                "position": "Frontend Engineer at X",
-                "bullets": "Bullet One, Bullet Two"
+                "position": "Senior Software Engineer at Respond.io",
+                "bullets": [
+                    "Solved complex backend problems and developed infrastructure to support processing 5 million incoming and 8 million outgoing messages daily.",
+                    "Optimized conversation performance, reducing response time from 700ms to 100ms, boosting user satisfaction by 30%.",
+                    "Improved workflow execution speed by 20%, enhancing overall system efficiency.",
+                    "Enhanced push notifications by implementing batching, reducing delivery time from 10 seconds to 2 seconds, ensuring quicker user engagement.",
+                    "Collaborated with a team of 15 engineers to achieve these results."
+                ]
             },
             {
-                "id": "d495c23b-4f65-479a-9b8a-cfbc1c089725",
-                "dates": "July 2020 - March 2022",
+                "id": "2",
+                "dates": "Jan 2022 - Oct 2023",
                 "type": "Full Time",
-                "position": "Frontend Engineer at X",
-                "bullets": "Worked on the frontend of a React application, Worked on the frontend of a React application"
+                "position": "Senior Software Engineer at Nimblebot",
+                "bullets": [
+                    "Worked at Nimblebot, a premier provider of design and development services for industry leaders and government organizations (e.g., PayPal, Coursera, MIT, GitHub, HBO, Saudi Tourism Authority, Al Futtaim).",
+                    "Led the tech team as a product engineer.",
+                    "Focused on creating products from a customer perspective.",
+                    "Crafted scalable architectures and built robust systems for web and mobile applications.",
+                    "Spearheaded the development of the Hyyp mobile application, a social impact network for web 3.0 users.",
+                    "Ensured the tech process aligns with user needs and market demands."
+                ]
+            },
+            {
+                "id": "3",
+                "dates": "Sep 2018 - Jan 2022",
+                "type": "Full Time",
+                "position": "Senior Software Engineer at Mission",
+                "bullets": [
+                    "Engineered a robust biotech research SaaS platform that streamlined data analysis processes",
+                    "Reducing project turnaround times by 40% and enabling researchers to manage 250+ active projects concurrently with improved accuracy.",
+                    "Added new modules and features, and wrote unit tests for the existing codebase.",
+                    "Developed a SaaS security platform with integration support for HR data export.",
+                    "Created a healthcare portal for families to track vitals, doctor appointments, prescriptions, etc",
+                    "Built a drag-and-drop form builder for doctors to create patient forms in hospitals.",
+                    "Collaborated with a large team in an agile setup."
+                ]
+            },
+            {
+                "id": "4",
+                "dates": "Dec 2016 - Sep 2018",
+                "type": "Full Time",
+                "position": "Lead Software Engineer at IT Waly",
+                "bullets": [
+                    "Provided consulting and development services for websites, mobile applications, augmented reality solutions, and web-based applications",
+                    "Utilized top-notch technologies such as Ionic, Flutter, Vuforia, Vue.js, and Node.js.",
+                    "Employed management tools like Jira and Trello for project coordination.",
+                    "Managed clients from Fiverr and UpWork, ensuring project requirements were met.",
+                    "Coordinated and collaborated with fellow freelancers to deliver projects successfully."
+                ]
+            },
+            {
+                "id": "5",
+                "dates": "Feb 2016 - Nov 2016",
+                "type": "Full Time",
+                "position": "Software Engineer at Shoclef",
+                "bullets": [
+                    "Worked in a dynamic startup environment to bring our product to life.",
+                    "Developed Augmented Reality features using Vuforia in Unity 3D.",
+                    "Implemented Microsoft's Cognitive APIs for face recognition and detection.",
+                    "Utilized OpenCV for various image-processing tasks.",
+                    "Played a key role in creating an AR app with location-based buying and selling features."
+                ]
             }
         ],
         "education": {
-            "universityName": "University X",
-            "universityDate": "2016-2020",
-            "universityPara": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+            "universityName": "COMSATS University Islamabad",
+            "universityDate": "2012-2016",
+            "universityPara": "Bachelor of Science in Software Engineering"
         },
         "languages": [
             "Javascript",
-            "HTML5",
-            "CSS",
+            "Go",
+            "PHP",
             "Python",
-            "Go"
+            "Solidity",
+            "Microservices",
+            "DevOps",
+            "AWS Lambda",
+            "CloudFormation",
+            "SQS",
+            "Docker",
+            "Kubernetes"
         ],
         "frameworks": [
             "React",
             "Typescript",
-            "NodeJs"
+            "NodeJs",
+            "Express",
+            "NextJs",
+            "VueJs",
+            "NuxtJs",
+            "Laravel",
+            "Django",
+            "Flask",
+            "Angular"
         ],
         "others": [
-            "Figma",
-            "AdobeXD",
-            "AWS"
+            "Bubble.io",
+            "Git",
+            "Agile",
+            "Unit Testing",
+            "Problem Solving"
         ]
     }
 }
