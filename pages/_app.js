@@ -5,7 +5,7 @@ import Intercom from '@intercom/messenger-js-sdk';
 
 const App = ({ Component, pageProps }) => {
   Intercom({
-    app_id: 'cu5lloln',
+    app_id: 'xlmcjj4v',
   });
   return (
     <>
