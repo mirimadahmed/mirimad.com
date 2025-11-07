@@ -52,7 +52,22 @@ export default function Home() {
     <div className={`relative ${data.showCursor && "cursor-none"}`}>
       {data.showCursor && <Cursor />}
       <Head>
-        <title>{data.name}</title>
+        <title>{data.name} - AI Engineer at Intercom | Building Conversational AI</title>
+        <meta name="description" content="AI Engineer at Intercom building conversational AI experiences for chat, email, and voice. Specialized in LLMs, microservices, and scalable backend architectures." />
+        <meta name="keywords" content="AI Engineer, Conversational AI, LLMs, Intercom, Ruby on Rails, Golang, TypeScript, AWS, Microservices" />
+        <meta name="author" content="Mir Imad Ahmed" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mirimad.com/" />
+        <meta property="og:title" content="Mir Imad - AI Engineer at Intercom" />
+        <meta property="og:description" content="Building conversational AI infrastructure powering 30,000+ businesses worldwide" />
+        <meta property="og:image" content="https://mirimad.com/images/og-image.png" />
+
+        {/* Additional SEO */}
+        <link rel="canonical" content="https://mirimad.com/" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className="gradient-circle"></div>
@@ -67,25 +82,25 @@ export default function Home() {
           <div className="mt-5">
             <h1
               ref={textOne}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
+              className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
             >
               {data.headerTaglineOne}
             </h1>
             <h1
               ref={textTwo}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
             >
               {data.headerTaglineTwo}
             </h1>
             <h1
               ref={textThree}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
             >
               {data.headerTaglineThree}
             </h1>
             <h1
               ref={textFour}
-              className="text-3xl tablet:text-6xl laptop:text-6xl laptopl:text-8xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
             >
               {data.headerTaglineFour}
             </h1>
@@ -109,7 +124,22 @@ export default function Home() {
           </div>
         </div> */}
 
-        <div className="mt-10 laptop:mt-30 p-2 laptop:p-0">
+        {/* Tech Stack Section */}
+        <div className="mt-20 laptop:mt-40 p-2 laptop:p-0">
+          <h1 className="text-2xl text-bold mb-8">Tech Stack.</h1>
+          <div className="grid grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 gap-4">
+            {["Ruby on Rails", "Golang", "TypeScript", "React", "AWS", "Redis", "Docker", "LLMs & RAG", "Terraform", "Node.js", "Microservices", "PostgreSQL"].map((tech, index) => (
+              <div
+                key={index}
+                className="px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-purple-500 dark:hover:border-purple-500 transition-all duration-200 text-center font-medium"
+              >
+                {tech}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-20 laptop:mt-40 p-2 laptop:p-0">
           <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
           <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
             {data.services.map((service, index) => (

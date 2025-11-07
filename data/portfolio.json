@@ -1,11 +1,11 @@
 {
     "name": "Mir Imad",
     "headerTaglineOne": "Hello 👋",
-    "headerTaglineTwo": "I'm Mir Imad - curious",
-    "headerTaglineThree": "tech enthusiast",
-    "headerTaglineFour": " based in KL, Malaysia.",
+    "headerTaglineTwo": "I'm Mir Imad - AI Product Engineer",
+    "headerTaglineThree": "building conversational AI",
+    "headerTaglineFour": " at Intercom in London, UK.",
     "showCursor": true,
-    "showBlog": true,
+    "showBlog": false,
     "darkMode": true,
     "showResume": true,
     "socials": [
@@ -21,16 +21,6 @@
         },
         {
             "id": "3",
-            "title": "Twitter",
-            "link": "https://twitter.com/mirimadahmed"
-        },
-        {
-            "id": "4",
-            "title": "Blog",
-        "link": "/blog"
-        },
-        {
-            "id": "5",
             "title": "Email",
             "link": "mailto:mirimadahmed@outlook.com"
         }
@@ -82,96 +72,98 @@
     "services": [
         {
             "id": "1",
-            "title": "Software Development",
-            "description": "Crafting high-performance, scalable software tailored to your business needs. From concept to deployment, I build reliable and efficient solutions that drive growth."
+            "title": "AI & LLM Integration",
+            "description": "Build conversational AI agents powered by LLMs. I architect scalable AI infrastructure with RAG frameworks, enabling autonomous, context-aware interactions that scale to millions of users."
         },
         {
             "id": "2",
-            "title": "No Code MVP Development",
-            "description": "Bring your ideas to life faster with no code. I create functional, scalable MVPs that allow you to validate your concept and reach the market in record time."
+            "title": "Backend Architecture",
+            "description": "Design and build high-performance, event-driven microservices on AWS. Specialized in handling millions of daily transactions with sub-100ms latency and 99.99% uptime."
         },
         {
             "id": "3",
-            "title": "System Design",
-            "description": "Designing robust, scalable systems that meet your business needs. I architect solutions that are built to last, ensuring performance, security, and flexibility."
+            "title": "System Design & Consulting",
+            "description": "Architect robust, scalable systems for startups to enterprise. From infrastructure planning to implementation, I design solutions that grow with your business."
         },
         {
             "id": "4",
-            "title": "Fractional CTO",
-            "description": "Get C-level tech leadership on demand. I help you strategize, scale, and optimize your tech operations, driving your business forward without the full-time commitment."
+            "title": "Fractional CTO / Tech Advisor",
+            "description": "Strategic tech leadership on demand. I help you build engineering teams, define technical roadmaps, and make critical architecture decisions to accelerate growth."
         }
     ],
-    "aboutpara": "At respond.io, a $10M ARR company, I led the redefinition of business messaging across platforms. I developed cloud infrastructures using microservices and serverless AWS, processing 5M incoming and 8M outgoing messages daily. I improved workflow execution speed by 20%, reduced response times from 700ms to 100ms, and optimized code to reduce AWS Lambda costs by 35%. Previously, at Nimblebot ($1M ARR), I led a tech team of 10 in creating impactful digital products. I specialize in scalable web and mobile solutions, delivering results for projects used by thousands of companies globally.",
+    "aboutpara": "At Intercom, a $350M ARR company, I build conversational AI experiences for chat, email, and voice—enabling businesses to deploy autonomous AI agents that deliver human-like, context-aware support at scale. Previously, at Respond.io, a $20M ARR company, I led the development of AI agent infrastructure powering multi-channel conversational support, processing over 13 million daily messages across global businesses. Experienced in micro-services, AWS, and high-performance backend architectures, I'm passionate about creating intelligent, user-centric digital products that redefine how people interact with technology.",
     "resume": {
-        "tagline": "👋  I'm a software engineer, a tech enthusiast, and entrepreneur by heart.",
-        "description": "At respond.io, a $10M ARR company, I led the redefinition of business messaging across platforms. I developed cloud infrastructures using microservices and serverless AWS, processing 5M incoming and 8M outgoing messages daily. I improved workflow execution speed by 20%, reduced response times from 700ms to 100ms, and optimized code to reduce AWS Lambda costs by 35%. Previously, at Nimblebot ($1M ARR), I led a tech team of 10 in creating impactful digital products. I specialize in scalable web and mobile solutions, delivering results for projects used by thousands of companies globally.",
+        "tagline": "👋  I'm an AI engineer, building the future of conversational AI.",
+        "description": "At Intercom, a $350M ARR company, I build conversational AI experiences for chat, email, and voice—enabling businesses to deploy autonomous AI agents that deliver human-like, context-aware support at scale. Previously, at Respond.io, a $20M ARR company, I led the development of AI agent infrastructure powering multi-channel conversational support, processing over 13 million daily messages across global businesses. Experienced in micro-services, AWS, and high-performance backend architectures, I'm passionate about creating intelligent, user-centric digital products that redefine how people interact with technology.",
         "experiences": [
             {
                 "id": "1",
-                "dates": "Jan 2023 - Present",
+                "dates": "June 2025 - Present",
                 "type": "Full Time",
-                "position": "Senior Software Engineer at Respond.io",
+                "position": "AI Engineer PE3 at Intercom - London, UK",
                 "bullets": [
-                    "Solved complex backend problems and developed infrastructure to support processing 5 million incoming and 8 million outgoing messages daily.",
-                    "Optimized conversation performance, reducing response time from 700ms to 100ms, boosting user satisfaction by 30%.",
-                    "Improved workflow execution speed by 20%, enhancing overall system efficiency.",
-                    "Enhanced push notifications by implementing batching, reducing delivery time from 10 seconds to 2 seconds, ensuring quicker user engagement.",
-                    "Collaborated with a team of 15 engineers to achieve these results."
+                    "Build large-scale conversational AI infrastructure for chat, email, and voice automation—powering over 30,000 businesses worldwide.",
+                    "Architect and optimize backend systems that handle millions of AI-driven conversations daily, ensuring high reliability and sub-100ms response latency.",
+                    "Design and maintain event-driven, microservice architectures on AWS (EC2, DynamoDB, SQS, CloudFormation, Redis) for scalable message processing.",
+                    "Collaborate with data science and ML teams to integrate and fine-tune large language models (LLMs) that personalize agent responses.",
+                    "Develop APIs and orchestration layers that let businesses deploy, configure, and monitor AI agents across multiple communication channels.",
+                    "Tech: Ruby on Rails, Golang, TypeScript, Ember, React, AWS, Redis, Terraform, Anthropic Claude, RAG frameworks"
                 ]
             },
             {
                 "id": "2",
-                "dates": "Feb 2021 - Jan 2023",
+                "dates": "Nov 2023 - May 2025",
                 "type": "Full Time",
-                "position": "Senior Software Engineer at Nimblebot",
+                "position": "Senior AI Engineer at Respond.io - Malaysia",
                 "bullets": [
-                    "Worked at Nimblebot, a premier provider of design and development services for industry leaders and government organizations (e.g., PayPal, Coursera, MIT, GitHub, HBO, Saudi Tourism Authority, Al Futtaim).",
-                    "Led the tech team as a product engineer.",
-                    "Focused on creating products from a customer perspective.",
-                    "Crafted scalable architectures and built robust systems for web and mobile applications.",
-                    "Spearheaded the development of the Hyyp mobile application, a social impact network for web 3.0 users.",
-                    "Ensured the tech process aligns with user needs and market demands."
+                    "Led development of AI agent messaging infrastructure supporting 13 million daily conversations across multiple communication channels.",
+                    "Solved complex backend challenges and built distributed infrastructure enabling AI agents to handle 13M+ daily messages with high availability.",
+                    "Optimized conversation workflows, reducing response time from 700ms to 100ms and boosting user satisfaction by 30%.",
+                    "Enhanced push notification systems through batching and delivery optimization, cutting average delivery time from 10s to 2s.",
+                    "Collaborated with a cross-functional team of 15 engineers.",
+                    "Tech: Node.js, Golang, TypeScript, AWS (RDS, DynamoDB, Redis, SQS, Lambda, CloudFormation), Docker, Buildkite"
                 ]
             },
             {
                 "id": "3",
-                "dates": "Sep 2018 - Jan 2021",
+                "dates": "Jul 2022 - Nov 2023",
                 "type": "Full Time",
-                "position": "Senior Software Engineer at Mission",
+                "position": "Senior Software Engineer at Nimblebot - USA Remote",
                 "bullets": [
-                    "Engineered a robust biotech research SaaS platform that streamlined data analysis processes",
-                    "Reducing project turnaround times by 40% and enabling researchers to manage 250+ active projects concurrently with improved accuracy.",
-                    "Added new modules and features, and wrote unit tests for the existing codebase.",
-                    "Developed a SaaS security platform with integration support for HR data export.",
-                    "Created a healthcare portal for families to track vitals, doctor appointments, prescriptions, etc",
-                    "Built a drag-and-drop form builder for doctors to create patient forms in hospitals.",
-                    "Collaborated with a large team in an agile setup."
+                    "Led tech team of 6 engineers as a product engineer at a premier design/development services provider.",
+                    "Worked with industry leaders: PayPal, Coursera, MIT, GitHub, HBO, Saudi Tourism Authority, Al Futtaim.",
+                    "Crafted scalable architectures and built robust systems for web and mobile applications.",
+                    "Spearheaded development of Hyyp mobile application, a social impact network for web 3.0 users.",
+                    "Ensured tech process aligns with user needs and market demands.",
+                    "Tech: Node.js, Golang, Vue.js, Solidity, TypeScript, AWS (RDS, DynamoDB, Redis, SQS, Lambda), Docker"
                 ]
             },
             {
                 "id": "4",
-                "dates": "Dec 2016 - Sep 2018",
+                "dates": "Feb 2019 - Jun 2022",
                 "type": "Full Time",
-                "position": "Lead Software Engineer at IT Waly",
+                "position": "Software Engineer at Southville Solutions - USA Remote",
                 "bullets": [
-                    "Provided consulting and development services for websites, mobile applications, augmented reality solutions, and web-based applications",
-                    "Utilized top-notch technologies such as Ionic, Flutter, Vuforia, Vue.js, and Node.js.",
-                    "Employed management tools like Jira and Trello for project coordination.",
-                    "Managed clients from Fiverr and UpWork, ensuring project requirements were met.",
-                    "Coordinated and collaborated with fellow freelancers to deliver projects successfully."
+                    "Engineered robust biotech research SaaS platform that streamlined data analysis, reducing project turnaround times by 40%.",
+                    "Enabled researchers to manage 250+ active projects concurrently with improved accuracy.",
+                    "Developed SaaS security platform with integration support for HR data export.",
+                    "Created healthcare portal used by millions of families in Canada to track vitals, appointments, prescriptions.",
+                    "Built drag-and-drop form builder for doctors used daily by millions of doctors in Canada.",
+                    "Tech: Vue.js, Angular, TypeScript, Jest, Jasmine, Node.js, PHP, Odata, Breeze, Azure Pipelines"
                 ]
             },
             {
                 "id": "5",
-                "dates": "Feb 2016 - Nov 2016",
+                "dates": "Sep 2016 - Feb 2019",
                 "type": "Full Time",
-                "position": "Software Engineer at Shoclef",
+                "position": "Software Engineer at Smart Coders - Pakistan",
                 "bullets": [
-                    "Worked in a dynamic startup environment to bring our product to life.",
-                    "Developed Augmented Reality features using Vuforia in Unity 3D.",
-                    "Implemented Microsoft's Cognitive APIs for face recognition and detection.",
-                    "Utilized OpenCV for various image-processing tasks.",
-                    "Played a key role in creating an AR app with location-based buying and selling features."
+                    "Developed and maintained scalable web applications using Node.js, Golang, and PHP.",
+                    "Built and optimized RESTful APIs, integrated Vue.js and Angular for front-end.",
+                    "Managed MySQL, PostgreSQL, and MongoDB databases.",
+                    "Deployed applications on AWS (EC2, S3, RDS, Lambda, CloudFront, DynamoDB).",
+                    "Implemented CI/CD pipelines with Jenkins and GitHub Actions.",
+                    "Tech: Node.js, Golang, PHP, Angular, Vue.js, MySQL, MongoDB, AWS, Docker"
                 ]
             }
         ],
@@ -181,38 +173,35 @@
             "universityPara": "Bachelor of Science in Software Engineering"
         },
         "languages": [
-            "Javascript",
-            "Go",
-            "PHP",
+            "Ruby on Rails",
+            "Golang",
+            "JavaScript/TypeScript",
             "Python",
-            "Solidity",
-            "Microservices",
-            "DevOps",
-            "AWS Lambda",
-            "CloudFormation",
-            "SQS",
-            "Docker",
-            "Kubernetes"
+            "Node.js",
+            "PHP",
+            "Solidity"
         ],
         "frameworks": [
             "React",
-            "Typescript",
-            "NodeJs",
+            "Next.js",
+            "Ember.js",
+            "Vue.js",
+            "Angular",
             "Express",
-            "NextJs",
-            "VueJs",
-            "NuxtJs",
             "Laravel",
             "Django",
-            "Flask",
-            "Angular"
+            "Flask"
         ],
         "others": [
-            "Bubble.io",
+            "AWS (Lambda, EC2, SQS, DynamoDB)",
+            "Microservices",
+            "LLMs & RAG",
+            "Redis",
+            "Docker",
+            "Kubernetes",
+            "Terraform",
             "Git",
-            "Agile",
-            "Unit Testing",
-            "Problem Solving"
+            "Agile"
         ]
     }
 }
