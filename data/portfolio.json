@@ -1,9 +1,9 @@
 {
-    "name": "Mir Imad",
+    "name": "Mir Imad Ahmed",
     "headerTaglineOne": "Hello 👋",
-    "headerTaglineTwo": "I'm Mir Imad - AI Product Engineer",
-    "headerTaglineThree": "building conversational AI",
-    "headerTaglineFour": " at Intercom in London, UK.",
+    "headerTaglineTwo": "I'm Mir Imad Ahmed — Senior Software Engineer",
+    "headerTaglineThree": "building AI of the future",
+    "headerTaglineFour": " at Microsoft AI · London, UK.",
     "showCursor": true,
     "showBlog": false,
     "darkMode": true,
@@ -23,6 +23,11 @@
             "id": "3",
             "title": "Email",
             "link": "mailto:mirimadahmed@outlook.com"
+        },
+        {
+            "id": "4",
+            "title": "Phone",
+            "link": "tel:+447303125888"
         }
     ],
     "projects": [
@@ -91,86 +96,90 @@
             "description": "Strategic tech leadership on demand. I help you build engineering teams, define technical roadmaps, and make critical architecture decisions to accelerate growth."
         }
     ],
-    "aboutpara": "At Intercom, a $350M ARR company, I build conversational AI experiences for chat, email, and voice—enabling businesses to deploy autonomous AI agents that deliver human-like, context-aware support at scale. Previously, at Respond.io, a $20M ARR company, I led the development of AI agent infrastructure powering multi-channel conversational support, processing over 13 million daily messages across global businesses. Experienced in micro-services, AWS, and high-performance backend architectures, I'm passionate about creating intelligent, user-centric digital products that redefine how people interact with technology.",
+    "aboutpara": "I'm a Senior Software Engineer on the Super Intelligence team at Microsoft AI, building AI capabilities across the Microsoft ecosystem—models for text, image, audio, and video. Previously, on Intercom's AI Agent Team, I shipped large-scale conversational AI infrastructure for chat, email, and voice, powering 30,000+ businesses with autonomous, context-aware agents backed by LLMs and robust backends. Before that, at respond.io, I led AI agent messaging infrastructure supporting 13 million daily conversations. I care about scalable systems, reliability, and products that meaningfully advance how people use AI.",
     "resume": {
-        "tagline": "👋  I'm an AI engineer, building the future of conversational AI.",
-        "description": "At Intercom, a $350M ARR company, I build conversational AI experiences for chat, email, and voice—enabling businesses to deploy autonomous AI agents that deliver human-like, context-aware support at scale. Previously, at Respond.io, a $20M ARR company, I led the development of AI agent infrastructure powering multi-channel conversational support, processing over 13 million daily messages across global businesses. Experienced in micro-services, AWS, and high-performance backend architectures, I'm passionate about creating intelligent, user-centric digital products that redefine how people interact with technology.",
+        "tagline": "👋 Building AI of the future at Microsoft AI.",
+        "description": "I'm a Senior Software Engineer on the Super Intelligence team at Microsoft AI, building AI capabilities across the Microsoft ecosystem—models for text, image, audio, and video. Previously, on Intercom's AI Agent Team, I shipped large-scale conversational AI infrastructure for chat, email, and voice, powering 30,000+ businesses. Before that, at respond.io, I led AI agent messaging infrastructure supporting 13 million daily conversations.",
         "experiences": [
             {
                 "id": "1",
-                "dates": "June 2025 - Present",
+                "dates": "April 2026 - Present",
                 "type": "Full Time",
-                "position": "AI Engineer PE3 at Intercom - London, UK",
+                "position": "Senior Software Engineer at Microsoft - London, UK",
                 "bullets": [
-                    "Build large-scale conversational AI infrastructure for chat, email, and voice automation—powering over 30,000 businesses worldwide.",
-                    "Architect and optimize backend systems that handle millions of AI-driven conversations daily, ensuring high reliability and sub-100ms response latency.",
-                    "Design and maintain event-driven, microservice architectures on AWS (EC2, DynamoDB, SQS, CloudFormation, Redis) for scalable message processing.",
-                    "Collaborate with data science and ML teams to integrate and fine-tune large language models (LLMs) that personalize agent responses.",
-                    "Develop APIs and orchestration layers that let businesses deploy, configure, and monitor AI agents across multiple communication channels.",
-                    "Tech: Ruby on Rails, Golang, TypeScript, Ember, React, AWS, Redis, Terraform, Anthropic Claude, RAG frameworks"
+                    "Building AI capabilities for the Microsoft ecosystem as part of the Super Intelligence team.",
+                    "Developing models for text, image generation, audio, and video to support the future of AI."
                 ]
             },
             {
                 "id": "2",
-                "dates": "Nov 2023 - May 2025",
+                "dates": "June 2025 - April 2026",
                 "type": "Full Time",
-                "position": "Senior AI Engineer at Respond.io - Malaysia",
+                "position": "Product Engineer 3 at Intercom - London, UK",
                 "bullets": [
-                    "Led development of AI agent messaging infrastructure supporting 13 million daily conversations across multiple communication channels.",
-                    "Solved complex backend challenges and built distributed infrastructure enabling AI agents to handle 13M+ daily messages with high availability.",
-                    "Optimized conversation workflows, reducing response time from 700ms to 100ms and boosting user satisfaction by 30%.",
-                    "Enhanced push notification systems through batching and delivery optimization, cutting average delivery time from 10s to 2s.",
-                    "Collaborated with a cross-functional team of 15 engineers.",
-                    "Tech: Node.js, Golang, TypeScript, AWS (RDS, DynamoDB, Redis, SQS, Lambda, CloudFormation), Docker, Buildkite"
+                    "As part of Intercom's AI Agent Team, helped build large-scale conversational AI infrastructure for chat, email, and voice automation—powering over 30,000 businesses worldwide.",
+                    "Worked toward autonomous, context-aware agents that combine advanced LLMs with robust backend architecture to deliver reliable, human-like interactions.",
+                    "Tech: Ruby on Rails, Golang, TypeScript, Ember, React, PlanetScale, AWS (Lambda, EC2, SQS, DynamoDB, ElasticSearch), Redis, Terraform, Datadog, Honeycomb, Sentry, Buildkite, Anthropic Claude, Cursor, Figma, RAG frameworks."
                 ]
             },
             {
                 "id": "3",
-                "dates": "Jul 2022 - Nov 2023",
+                "dates": "November 2023 - May 2025",
                 "type": "Full Time",
-                "position": "Senior Software Engineer at Nimblebot - USA Remote",
+                "position": "Senior AI Engineer at respond.io - Kuala Lumpur, Malaysia",
                 "bullets": [
-                    "Led tech team of 6 engineers as a product engineer at a premier design/development services provider.",
-                    "Worked with industry leaders: PayPal, Coursera, MIT, GitHub, HBO, Saudi Tourism Authority, Al Futtaim.",
-                    "Crafted scalable architectures and built robust systems for web and mobile applications.",
-                    "Spearheaded development of Hyyp mobile application, a social impact network for web 3.0 users.",
-                    "Ensured tech process aligns with user needs and market demands.",
-                    "Tech: Node.js, Golang, Vue.js, Solidity, TypeScript, AWS (RDS, DynamoDB, Redis, SQS, Lambda), Docker"
+                    "Led the development of AI agent messaging infrastructure supporting 13 million daily conversations across multiple communication channels.",
+                    "Focused on delivering low-latency, reliable, and scalable backend systems for enterprise-level customer support AI agents.",
+                    "Solved complex backend challenges and built distributed infrastructure enabling AI agents to handle 13M+ daily messages with high availability.",
+                    "Optimized conversation workflows by refactoring core modules and improving server configurations, reducing response time from 700 ms to 100 ms and boosting user satisfaction by 30%.",
+                    "Enhanced push notification systems through batching and delivery optimization, cutting average delivery time from 10 s to 2 s for faster user engagement.",
+                    "Collaborated with a cross-functional team of 15 engineers, ensuring smooth product delivery, scalability, and performance across global deployments.",
+                    "Tech: Node.js, Golang, TypeScript, RDS, DynamoDB, Redis, SQS, Lambdas, CloudFormation, CloudWatch, Docker, Buildkite."
                 ]
             },
             {
                 "id": "4",
-                "dates": "Feb 2019 - Jun 2022",
+                "dates": "July 2022 - November 2023",
                 "type": "Full Time",
-                "position": "Software Engineer at Southville Solutions - USA Remote",
+                "position": "Senior Software Engineer at Nimblebot - Remote",
                 "bullets": [
-                    "Engineered robust biotech research SaaS platform that streamlined data analysis, reducing project turnaround times by 40%.",
-                    "Enabled researchers to manage 250+ active projects concurrently with improved accuracy.",
-                    "Developed SaaS security platform with integration support for HR data export.",
-                    "Created healthcare portal used by millions of families in Canada to track vitals, appointments, prescriptions.",
-                    "Built drag-and-drop form builder for doctors used daily by millions of doctors in Canada.",
-                    "Tech: Vue.js, Angular, TypeScript, Jest, Jasmine, Node.js, PHP, Odata, Breeze, Azure Pipelines"
+                    "Worked at Nimblebot, a premier provider of design and development services for industry leaders and government organizations (e.g., PayPal, Coursera, MIT, GitHub, HBO, Saudi Tourism Authority, Al Futtaim).",
+                    "Led the tech team as a product engineer; focused on creating products from a customer perspective.",
+                    "Crafted scalable architectures and built robust systems for web and mobile applications.",
+                    "Spearheaded the development of the Hyyp mobile application, a social impact network for web 3.0 users.",
+                    "Ensured the tech process aligns with user needs and market demands."
                 ]
             },
             {
                 "id": "5",
-                "dates": "Sep 2016 - Feb 2019",
+                "dates": "February 2019 - June 2022",
                 "type": "Full Time",
-                "position": "Software Engineer at Smart Coders - Pakistan",
+                "position": "Software Engineer at Mission.dev - Remote",
+                "bullets": [
+                    "Mission 4: Engineered a robust biotech research SaaS platform that streamlined data analysis processes, reducing project turnaround times by 40% and enabling researchers to manage 250+ active projects concurrently with improved accuracy. Added new modules and features, and wrote unit tests for the existing codebase. Collaborated with a large team in an agile setup. Tech stack: Angular, C#, OData, Breeze, Jasmine, Azure DevOps. System used by thousands of people and hundreds of companies globally, impacting millions.",
+                    "Mission 3: Developed a SaaS security platform with integration support for HR data export. Tech stack: PHP, Symfony. Platform used by millions of users.",
+                    "Mission 2: Created a healthcare portal for families to track vitals, doctor appointments, prescriptions, etc. Tech stack: Vue.js, Jest, Node.js. Portal used by millions of families in Canada.",
+                    "Mission 1: Built a drag-and-drop form builder for doctors to create patient forms in hospitals. Tech stack: Vue.js, Node.js. Tool used daily by millions of doctors."
+                ]
+            },
+            {
+                "id": "6",
+                "dates": "September 2016 - February 2019",
+                "type": "Full Time",
+                "position": "Software Engineer at ITWaly - Pakistan",
                 "bullets": [
                     "Developed and maintained scalable web applications using Node.js, Golang, and PHP.",
-                    "Built and optimized RESTful APIs, integrated Vue.js and Angular for front-end.",
-                    "Managed MySQL, PostgreSQL, and MongoDB databases.",
-                    "Deployed applications on AWS (EC2, S3, RDS, Lambda, CloudFront, DynamoDB).",
-                    "Implemented CI/CD pipelines with Jenkins and GitHub Actions.",
-                    "Tech: Node.js, Golang, PHP, Angular, Vue.js, MySQL, MongoDB, AWS, Docker"
+                    "Built and optimized RESTful APIs, integrated Vue.js and Angular for the front end, and managed MySQL, PostgreSQL, and MongoDB databases.",
+                    "Deployed applications on AWS (EC2, S3, RDS, Lambda, CloudFront, DynamoDB) and implemented CI/CD pipelines with Jenkins and GitHub Actions.",
+                    "Ensured security best practices with OAuth 2.0, JWT, and RBAC while optimizing system performance.",
+                    "Followed Agile methodologies, conducted code reviews, and documented requirements, planning, and infrastructure."
                 ]
             }
         ],
         "education": {
-            "universityName": "COMSATS University Islamabad",
-            "universityDate": "2012-2016",
-            "universityPara": "Bachelor of Science in Software Engineering"
+            "universityName": "COMSATS Institute of Information and Technology",
+            "universityDate": "2012 - 2016",
+            "universityPara": "Bachelor's of Science in Software Engineering, Computer Software Engineering"
         },
         "languages": [
             "Ruby on Rails",
@@ -179,20 +188,23 @@
             "Python",
             "Node.js",
             "PHP",
-            "Solidity"
+            "C#"
         ],
         "frameworks": [
             "React",
             "Next.js",
+            "Nuxt.js",
             "Ember.js",
             "Vue.js",
             "Angular",
             "Express",
             "Laravel",
             "Django",
-            "Flask"
+            "Flask",
+            "Flutter"
         ],
         "others": [
+            "Artificial Intelligence (AI)",
             "AWS (Lambda, EC2, SQS, DynamoDB)",
             "Microservices",
             "LLMs & RAG",
@@ -200,6 +212,12 @@
             "Docker",
             "Kubernetes",
             "Terraform",
+            "PlanetScale",
+            "Elasticsearch",
+            "Datadog",
+            "Honeycomb",
+            "Sentry",
+            "Buildkite",
             "Git",
             "Agile"
         ]

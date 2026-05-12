@@ -52,16 +52,16 @@ export default function Home() {
     <div className={`relative ${data.showCursor && "cursor-none"}`}>
       {data.showCursor && <Cursor />}
       <Head>
-        <title>{data.name} - AI Engineer at Intercom | Building Conversational AI</title>
-        <meta name="description" content="AI Engineer at Intercom building conversational AI experiences for chat, email, and voice. Specialized in LLMs, microservices, and scalable backend architectures." />
-        <meta name="keywords" content="AI Engineer, Conversational AI, LLMs, Intercom, Ruby on Rails, Golang, TypeScript, AWS, Microservices" />
+        <title>{data.name} - Senior Software Engineer at Microsoft AI</title>
+        <meta name="description" content="Senior Software Engineer on the Super Intelligence team at Microsoft AI. Previously built conversational AI at Intercom and AI agent infrastructure at respond.io." />
+        <meta name="keywords" content="Microsoft AI, AI Engineer, Conversational AI, LLMs, Intercom, Ruby on Rails, Golang, TypeScript, AWS, Microservices" />
         <meta name="author" content="Mir Imad Ahmed" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mirimad.com/" />
-        <meta property="og:title" content="Mir Imad - AI Engineer at Intercom" />
-        <meta property="og:description" content="Building conversational AI infrastructure powering 30,000+ businesses worldwide" />
+        <meta property="og:title" content="Mir Imad Ahmed - Microsoft AI" />
+        <meta property="og:description" content="Building AI of the future at Microsoft AI. Ex-Intercom AI Agent Team, respond.io." />
         <meta property="og:image" content="https://mirimad.com/images/og-image.png" />
 
         {/* Additional SEO */}
