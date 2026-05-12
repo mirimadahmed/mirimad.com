@@ -11,12 +11,21 @@ import BlogEditor from "../../components/BlogEditor";
 import { useRouter } from "next/router";
 import Cursor from "../../components/Cursor";
 import data from "../../data/portfolio.json";
+import { SITE_URL, absUrl } from "../../utils/seo";
 
 const BlogPost = ({ post }) => {
   const [showEditor, setShowEditor] = useState(false);
   const textOne = useRef();
   const textTwo = useRef();
   const router = useRouter();
+
+  const canonicalUrl = `${SITE_URL}/blog/${post.slug}`;
+  const ogImage = absUrl(post.image);
+  const description =
+    post.preview && post.preview.length > 160
+      ? `${post.preview.slice(0, 157)}…`
+      : post.preview || post.tagline;
+  const pageTitle = `${post.title} | ${data.name} — Blog`;
 
   useIsomorphicLayoutEffect(() => {
     stagger([textOne.current, textTwo.current], { y: 30 }, { y: 0 });
@@ -25,8 +34,24 @@ const BlogPost = ({ post }) => {
   return (
     <>
       <Head>
-        <title>{"Blog - " + post.title}</title>
-        <meta name="description" content={post.preview} />
+        <title>{pageTitle}</title>
+        <meta name="description" content={description} />
+        <meta name="robots" content="index,follow,max-image-preview:large" />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:site_name" content={data.name} />
+        {post.date && (
+          <meta property="article:published_time" content={post.date} />
+        )}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={post.title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
       </Head>
       {data.showCursor && <Cursor />}
 
@@ -84,7 +109,6 @@ export async function getStaticProps({ params }) {
     "preview",
     "title",
     "tagline",
-    "preview",
     "image",
     "content",
   ]);

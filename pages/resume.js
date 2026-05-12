@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import Cursor from "../components/Cursor";
 import Header from "../components/Header";
@@ -10,6 +11,7 @@ import { useTheme } from "next-themes";
 import { name, showResume } from "../data/portfolio.json";
 import { resume } from "../data/portfolio.json";
 import data from "../data/portfolio.json";
+import { SITE_URL, DEFAULT_OG_IMAGE } from "../utils/seo";
 
 const Resume = () => {
   const router = useRouter();
@@ -22,8 +24,31 @@ const Resume = () => {
       router.push("/");
     }
   }, []);
+
+  const resumeTitle = `${name} — Resume | Software engineer (Microsoft AI, Intercom)`;
+  const resumeDesc =
+    resume.description.length > 165
+      ? `${resume.description.slice(0, 162)}…`
+      : resume.description;
+
   return (
     <>
+      <Head>
+        <title>{resumeTitle}</title>
+        <meta name="description" content={resumeDesc} />
+        <meta name="robots" content="index,follow,max-image-preview:large" />
+        <link rel="canonical" href={`${SITE_URL}/resume`} />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content={`${SITE_URL}/resume`} />
+        <meta property="og:title" content={resumeTitle} />
+        <meta property="og:description" content={resumeDesc} />
+        <meta property="og:image" content={DEFAULT_OG_IMAGE} />
+        <meta property="og:locale" content="en_GB" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={resumeTitle} />
+        <meta name="twitter:description" content={resumeDesc} />
+        <meta name="twitter:image" content={DEFAULT_OG_IMAGE} />
+      </Head>
       {process.env.NODE_ENV === "development" && (
         <div className="fixed bottom-6 right-6">
           <Button onClick={() => router.push("/edit")} type={"primary"}>
@@ -46,15 +71,13 @@ const Resume = () => {
               } max-w-4xl p-20 mob:p-5 desktop:p-20 rounded-lg shadow-sm`}
             >
               <h1 className="text-3xl font-bold">{name}</h1>
-              <h2 className="text-xl mt-5">{resume.tagline}</h2>
-              <h2 className="w-4/5 text-xl mt-5 opacity-50">
-                {resume.description}
-              </h2>
+              <p className="text-xl mt-5 font-medium">{resume.tagline}</p>
+              <p className="w-4/5 text-xl mt-5 opacity-50">{resume.description}</p>
               <div className="mt-2">
                 <Socials />
               </div>
               <div className="mt-5">
-                <h1 className="text-2xl font-bold">Experience</h1>
+                <h2 className="text-2xl font-bold">Experience</h2>
 
                 {resume.experiences.map(
                   ({ id, dates, type, position, bullets }) => (
@@ -69,23 +92,23 @@ const Resume = () => {
                 )}
               </div>
               <div className="mt-5">
-                <h1 className="text-2xl font-bold">Education</h1>
+                <h2 className="text-2xl font-bold">Education</h2>
                 <div className="mt-2">
-                  <h2 className="text-lg">{resume.education.universityName}</h2>
-                  <h3 className="text-sm opacity-75">
+                  <h3 className="text-lg">{resume.education.universityName}</h3>
+                  <p className="text-sm opacity-75">
                     {resume.education.universityDate}
-                  </h3>
+                  </p>
                   <p className="text-sm mt-2 opacity-50">
                     {resume.education.universityPara}
                   </p>
                 </div>
               </div>
               <div className="mt-5">
-                <h1 className="text-2xl font-bold">Skills</h1>
+                <h2 className="text-2xl font-bold">Skills</h2>
                 <div className="flex mob:flex-col desktop:flex-row justify-between">
                   {resume.languages && (
                     <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Languages</h2>
+                      <h3 className="text-lg">Languages</h3>
                       <ul className="list-disc">
                         {resume.languages.map((language, index) => (
                           <li key={index} className="ml-5 py-2">
@@ -98,7 +121,7 @@ const Resume = () => {
 
                   {resume.frameworks && (
                     <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Frameworks</h2>
+                      <h3 className="text-lg">Frameworks</h3>
                       <ul className="list-disc">
                         {resume.frameworks.map((framework, index) => (
                           <li key={index} className="ml-5 py-2">
@@ -111,7 +134,7 @@ const Resume = () => {
 
                   {resume.others && (
                     <div className="mt-2 mob:mt-5">
-                      <h2 className="text-lg">Others</h2>
+                      <h3 className="text-lg">Others</h3>
                       <ul className="list-disc">
                         {resume.others.map((other, index) => (
                           <li key={index} className="ml-5 py-2">

@@ -13,6 +13,17 @@ import Cursor from "../components/Cursor";
 
 // Local Data
 import data from "../data/portfolio.json";
+import {
+  SITE_URL,
+  DEFAULT_OG_IMAGE,
+  buildPersonJsonLd,
+} from "../utils/seo";
+
+const HOME_TITLE =
+  "Mir Imad Ahmed | Senior Software Engineer, Microsoft AI — Portfolio";
+
+const HOME_DESCRIPTION =
+  "Mir Imad Ahmed is a Senior Software Engineer on the Super Intelligence team at Microsoft AI (London). Previously: Product Engineer on Intercom's AI Agent Team; Senior AI Engineer at respond.io (13M+ daily conversations). AI, LLMs, Ruby on Rails, Go, TypeScript, AWS.";
 
 export default function Home() {
   // Ref
@@ -52,22 +63,51 @@ export default function Home() {
     <div className={`relative ${data.showCursor && "cursor-none"}`}>
       {data.showCursor && <Cursor />}
       <Head>
-        <title>{data.name} - Senior Software Engineer at Microsoft AI</title>
-        <meta name="description" content="Senior Software Engineer on the Super Intelligence team at Microsoft AI. Previously built conversational AI at Intercom and AI agent infrastructure at respond.io." />
-        <meta name="keywords" content="Microsoft AI, AI Engineer, Conversational AI, LLMs, Intercom, Ruby on Rails, Golang, TypeScript, AWS, Microservices" />
-        <meta name="author" content="Mir Imad Ahmed" />
+        <title>{HOME_TITLE}</title>
+        <meta name="description" content={HOME_DESCRIPTION} />
+        <meta
+          name="keywords"
+          content="Mir Imad Ahmed, Microsoft AI, AI engineer, conversational AI, LLM, RAG, Intercom, respond.io, Ruby on Rails, Golang, Go, TypeScript, React, AWS, microservices, London, software engineer portfolio"
+        />
+        <meta name="author" content={data.name} />
+        <meta name="robots" content="index,follow,max-image-preview:large" />
+        <meta name="googlebot" content="index,follow" />
+        <meta name="theme-color" content="#0f172a" />
 
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mirimad.com/" />
-        <meta property="og:title" content="Mir Imad Ahmed - Microsoft AI" />
-        <meta property="og:description" content="Building AI of the future at Microsoft AI. Ex-Intercom AI Agent Team, respond.io." />
-        <meta property="og:image" content="https://mirimad.com/images/og-image.png" />
-
-        {/* Additional SEO */}
-        <link rel="canonical" content="https://mirimad.com/" />
+        <link rel="canonical" href={SITE_URL + "/"} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Mir Imad Ahmed" />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:url" content={SITE_URL + "/"} />
+        <meta property="og:title" content={HOME_TITLE} />
+        <meta property="og:description" content={HOME_DESCRIPTION} />
+        <meta property="og:image" content={DEFAULT_OG_IMAGE} />
+        <meta property="og:image:alt" content={`${data.name} — portfolio and resume`} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={HOME_TITLE} />
+        <meta name="twitter:description" content={HOME_DESCRIPTION} />
+        <meta name="twitter:image" content={DEFAULT_OG_IMAGE} />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: buildPersonJsonLd({
+              name: data.name,
+              description: HOME_DESCRIPTION,
+              sameAs: data.socials
+                .map((s) => s.link)
+                .filter(
+                  (link) =>
+                    typeof link === "string" &&
+                    (link.startsWith("https://") || link.startsWith("http://"))
+                ),
+            }),
+          }}
+        />
       </Head>
 
       <div className="gradient-circle"></div>
@@ -80,30 +120,30 @@ export default function Home() {
         />
         <div className="laptop:mt-20 mt-10">
           <div className="mt-5">
-            <h1
+            <p
               ref={textOne}
               className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
             >
               {data.headerTaglineOne}
-            </h1>
+            </p>
             <h1
               ref={textTwo}
               className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
             >
               {data.headerTaglineTwo}
             </h1>
-            <h1
+            <h2
               ref={textThree}
               className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
             >
               {data.headerTaglineThree}
-            </h1>
-            <h1
+            </h2>
+            <h2
               ref={textFour}
               className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
             >
               {data.headerTaglineFour}
-            </h1>
+            </h2>
           </div>
 
           <Socials className="mt-2 laptop:mt-5" />
@@ -126,7 +166,7 @@ export default function Home() {
 
         {/* Tech Stack Section */}
         <div className="mt-20 laptop:mt-40 p-2 laptop:p-0">
-          <h1 className="text-2xl text-bold mb-8">Tech Stack.</h1>
+          <h2 className="text-2xl text-bold mb-8">Tech Stack.</h2>
           <div className="grid grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 gap-4">
             {["Ruby on Rails", "Golang", "TypeScript", "React", "AWS", "Redis", "Docker", "LLMs & RAG", "Terraform", "Node.js", "Microservices", "PostgreSQL"].map((tech, index) => (
               <div
@@ -140,7 +180,7 @@ export default function Home() {
         </div>
 
         <div className="mt-20 laptop:mt-40 p-2 laptop:p-0">
-          <h1 className="tablet:m-10 text-2xl text-bold">Services.</h1>
+          <h2 className="tablet:m-10 text-2xl text-bold">Services.</h2>
           <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
             {data.services.map((service, index) => (
               <ServiceCard
@@ -159,12 +199,18 @@ export default function Home() {
             </Link>
           </div>
         )}
-        <div className="mt-10 laptop:mt-40 p-2 laptop:p-0" ref={aboutRef}>
-          <h1 className="tablet:m-10 text-2xl text-bold">About.</h1>
+        <section
+          className="mt-10 laptop:mt-40 p-2 laptop:p-0"
+          ref={aboutRef}
+          aria-labelledby="about-heading"
+        >
+          <h2 id="about-heading" className="tablet:m-10 text-2xl text-bold">
+            About.
+          </h2>
           <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
             {data.aboutpara}
           </p>
-        </div>
+        </section>
         <Footer />
       </div>
     </div>

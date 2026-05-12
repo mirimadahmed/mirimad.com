@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Head from "next/head";
 import Button from "../components/Button";
 import Header from "../components/Header";
 import { v4 as uuidv4 } from "uuid";
@@ -147,6 +148,12 @@ const Edit = () => {
   };
 
   return (
+    <>
+      <Head>
+        <title>Dashboard — site editor (private)</title>
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="googlebot" content="noindex,nofollow" />
+      </Head>
     <div className={`container mx-auto ${data.showCursor && "cursor-none"}`}>
       <Header isBlog></Header>
       {data.showCursor && <Cursor />}
@@ -905,6 +912,7 @@ const Edit = () => {
         )}
       </div>
     </div>
+    </>
   );
 };
 

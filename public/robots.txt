@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /edit
+Disallow: /api/
+
+Sitemap: https://mirimad.com/api/sitemap

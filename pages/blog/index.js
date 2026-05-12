@@ -8,6 +8,11 @@ import Header from "../../components/Header";
 import data from "../../data/portfolio.json";
 import { ISOToDate, useIsomorphicLayoutEffect } from "../../utils";
 import { getAllPosts } from "../../utils/api";
+import { SITE_URL, DEFAULT_OG_IMAGE } from "../../utils/seo";
+
+const BLOG_INDEX_TITLE = `Blog | ${data.name}`;
+const BLOG_INDEX_DESC =
+  "Articles on software engineering, AI, and building products — from Mir Imad Ahmed.";
 const Blog = ({ posts }) => {
   const showBlog = useRef(data.showBlog);
   const text = useRef();
@@ -65,7 +70,21 @@ const Blog = ({ posts }) => {
       <>
         {data.showCursor && <Cursor />}
         <Head>
-          <title>Blog</title>
+          <title>{BLOG_INDEX_TITLE}</title>
+          <meta name="description" content={BLOG_INDEX_DESC} />
+          <meta name="robots" content="index,follow,max-image-preview:large" />
+          <link rel="canonical" href={`${SITE_URL}/blog`} />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={`${SITE_URL}/blog`} />
+          <meta property="og:title" content={BLOG_INDEX_TITLE} />
+          <meta property="og:description" content={BLOG_INDEX_DESC} />
+          <meta property="og:image" content={DEFAULT_OG_IMAGE} />
+          <meta property="og:locale" content="en_GB" />
+          <meta property="og:site_name" content={data.name} />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={BLOG_INDEX_TITLE} />
+          <meta name="twitter:description" content={BLOG_INDEX_DESC} />
+          <meta name="twitter:image" content={DEFAULT_OG_IMAGE} />
         </Head>
         <div
           className={`container mx-auto mb-10 ${
