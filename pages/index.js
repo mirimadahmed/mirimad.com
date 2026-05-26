@@ -18,6 +18,7 @@ import {
   DEFAULT_OG_IMAGE,
   buildPersonJsonLd,
 } from "../utils/seo";
+import { track } from "../utils/posthog";
 
 const HOME_TITLE =
   "Mir Imad Ahmed | Senior Software Engineer, Microsoft AI — Portfolio";
@@ -120,27 +121,34 @@ export default function Home() {
         />
         <div className="laptop:mt-20 mt-10">
           <div className="mt-5">
+            <div className="inline-flex max-w-full items-center gap-2 px-3 py-1.5 mb-6 rounded-full text-xs tablet:text-sm font-medium border border-purple-500/30 bg-purple-500/10 text-purple-700 dark:text-purple-300">
+              <span className="relative flex h-2 w-2 shrink-0">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-purple-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+              </span>
+              <span className="min-w-0 truncate">Currently building AI at Microsoft · London</span>
+            </div>
             <p
               ref={textOne}
-              className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-4/5 mob:w-full laptop:w-4/5"
+              className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 font-bold w-4/5 mob:w-full laptop:w-4/5"
             >
               {data.headerTaglineOne}
             </p>
             <h1
               ref={textTwo}
-              className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 font-bold w-full laptop:w-4/5"
             >
               {data.headerTaglineTwo}
             </h1>
             <h2
               ref={textThree}
-              className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 font-bold w-full laptop:w-4/5"
             >
-              {data.headerTaglineThree}
+              <span className="text-gradient">{data.headerTaglineThree}</span>
             </h2>
             <h2
               ref={textFour}
-              className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 text-bold w-full laptop:w-4/5"
+              className="text-2xl tablet:text-4xl laptop:text-5xl laptopl:text-6xl p-1 tablet:p-2 font-bold w-full laptop:w-4/5"
             >
               {data.headerTaglineFour}
             </h2>
@@ -149,7 +157,7 @@ export default function Home() {
           <Socials className="mt-2 laptop:mt-5" />
         </div>
         {/* <div className="mt-10 laptop:mt-30 p-2 laptop:p-0" ref={workRef}>
-          <h1 className="text-2xl text-bold">Work.</h1>
+          <h1 className="text-2xl font-bold">Work.</h1>
 
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {data.projects.map((project) => (
@@ -166,12 +174,14 @@ export default function Home() {
 
         {/* Tech Stack Section */}
         <div className="mt-20 laptop:mt-40 p-2 laptop:p-0">
-          <h2 className="text-2xl text-bold mb-8">Tech Stack.</h2>
-          <div className="grid grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 gap-4">
+          <h2 className="text-2xl font-bold mb-2">Tech Stack.</h2>
+          <p className="opacity-60 text-base mb-8">Tools I reach for to build scalable, reliable AI systems.</p>
+          <div className="grid grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 gap-3">
             {["Ruby on Rails", "Golang", "TypeScript", "React", "AWS", "Redis", "Docker", "LLMs & RAG", "Terraform", "Node.js", "Microservices", "PostgreSQL"].map((tech, index) => (
               <div
                 key={index}
-                className="px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-purple-500 dark:hover:border-purple-500 transition-all duration-200 text-center font-medium"
+                onClick={() => track("tech_stack_clicked", { tech })}
+                className="px-4 py-3 rounded-xl border border-gray-200 dark:border-slate-800 hover:border-purple-500/70 dark:hover:border-purple-500/70 hover:-translate-y-0.5 hover:shadow-md hover:shadow-purple-500/10 transition-all duration-200 text-center font-medium text-sm cursor-pointer"
               >
                 {tech}
               </div>
@@ -180,13 +190,14 @@ export default function Home() {
         </div>
 
         <div className="mt-20 laptop:mt-40 p-2 laptop:p-0">
-          <h2 className="tablet:m-10 text-2xl text-bold">Services.</h2>
+          <h2 className="tablet:m-10 text-2xl font-bold">Services.</h2>
           <div className="mt-5 tablet:m-10 grid grid-cols-1 laptop:grid-cols-2 gap-6">
             {data.services.map((service, index) => (
               <ServiceCard
                 key={index}
                 name={service.title}
                 description={service.description}
+                icon={service.icon}
               />
             ))}
           </div>
@@ -200,14 +211,14 @@ export default function Home() {
           </div>
         )}
         <section
-          className="mt-10 laptop:mt-40 p-2 laptop:p-0"
+          className="mt-20 laptop:mt-40 p-2 laptop:p-0"
           ref={aboutRef}
           aria-labelledby="about-heading"
         >
-          <h2 id="about-heading" className="tablet:m-10 text-2xl text-bold">
+          <h2 id="about-heading" className="tablet:m-10 text-2xl font-bold">
             About.
           </h2>
-          <p className="tablet:m-10 mt-2 text-xl laptop:text-3xl w-full laptop:w-3/5">
+          <p className="tablet:m-10 mt-2 text-lg laptop:text-2xl w-full laptop:w-3/5 leading-relaxed opacity-80">
             {data.aboutpara}
           </p>
         </section>

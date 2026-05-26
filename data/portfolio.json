@@ -77,21 +77,25 @@
     "services": [
         {
             "id": "1",
+            "icon": "🤖",
             "title": "AI & LLM Integration",
             "description": "Build conversational AI agents powered by LLMs. I architect scalable AI infrastructure with RAG frameworks, enabling autonomous, context-aware interactions that scale to millions of users."
         },
         {
             "id": "2",
+            "icon": "⚡",
             "title": "Backend Architecture",
             "description": "Design and build high-performance, event-driven microservices on AWS. Specialized in handling millions of daily transactions with sub-100ms latency and 99.99% uptime."
         },
         {
             "id": "3",
+            "icon": "🧩",
             "title": "System Design & Consulting",
             "description": "Architect robust, scalable systems for startups to enterprise. From infrastructure planning to implementation, I design solutions that grow with your business."
         },
         {
             "id": "4",
+            "icon": "🚀",
             "title": "Fractional CTO / Tech Advisor",
             "description": "Strategic tech leadership on demand. I help you build engineering teams, define technical roadmaps, and make critical architecture decisions to accelerate growth."
         }
@@ -103,76 +107,107 @@
         "experiences": [
             {
                 "id": "1",
-                "dates": "April 2026 - Present",
-                "type": "Full Time",
-                "position": "Senior Software Engineer at Microsoft - London, UK",
+                "dates": "April 2026 — Present",
+                "type": "Full Time · London, UK",
+                "company": "Microsoft",
+                "position": "Senior Software Engineer",
+                "current": true,
                 "bullets": [
-                    "Building AI capabilities for the Microsoft ecosystem as part of the Super Intelligence team.",
-                    "Developing models for text, image generation, audio, and video to support the future of AI."
+                    "Building AI capabilities for the Microsoft ecosystem as part of the Microsoft AI Labs squad (Super Intelligence team).",
+                    "Envisioning and bringing new ideas to life — transforming cutting-edge models (text, image, audio, video) into usable, real-world experiences through model adaptation, productisation, and broad adoption.",
+                    "Bringing Microsoft AI models to millions of people globally."
                 ]
             },
             {
                 "id": "2",
-                "dates": "June 2025 - April 2026",
-                "type": "Full Time",
-                "position": "Product Engineer 3 at Intercom - London, UK",
+                "dates": "June 2025 — April 2026",
+                "type": "Full Time · London, UK",
+                "company": "Intercom",
+                "position": "Product Engineer 3",
                 "bullets": [
-                    "As part of Intercom's AI Agent Team, helped build large-scale conversational AI infrastructure for chat, email, and voice automation—powering over 30,000 businesses worldwide.",
+                    "As part of Intercom's AI Agent Team, helped build large-scale conversational AI infrastructure for chat, email, and voice automation — powering over 30,000 businesses worldwide.",
                     "Worked toward autonomous, context-aware agents that combine advanced LLMs with robust backend architecture to deliver reliable, human-like interactions.",
                     "Tech: Ruby on Rails, Golang, TypeScript, Ember, React, PlanetScale, AWS (Lambda, EC2, SQS, DynamoDB, ElasticSearch), Redis, Terraform, Datadog, Honeycomb, Sentry, Buildkite, Anthropic Claude, Cursor, Figma, RAG frameworks."
                 ]
             },
             {
                 "id": "3",
-                "dates": "November 2023 - May 2025",
-                "type": "Full Time",
-                "position": "Senior AI Engineer at respond.io - Kuala Lumpur, Malaysia",
+                "dates": "November 2023 — May 2025",
+                "type": "Full Time · Kuala Lumpur, Malaysia",
+                "company": "respond.io",
+                "position": "Senior AI Engineer",
                 "bullets": [
                     "Led the development of AI agent messaging infrastructure supporting 13 million daily conversations across multiple communication channels.",
                     "Focused on delivering low-latency, reliable, and scalable backend systems for enterprise-level customer support AI agents.",
-                    "Solved complex backend challenges and built distributed infrastructure enabling AI agents to handle 13M+ daily messages with high availability.",
-                    "Optimized conversation workflows by refactoring core modules and improving server configurations, reducing response time from 700 ms to 100 ms and boosting user satisfaction by 30%.",
-                    "Enhanced push notification systems through batching and delivery optimization, cutting average delivery time from 10 s to 2 s for faster user engagement.",
-                    "Collaborated with a cross-functional team of 15 engineers, ensuring smooth product delivery, scalability, and performance across global deployments.",
+                    "Built distributed infrastructure enabling AI agents to handle 13M+ daily messages with high availability.",
+                    "Optimized conversation workflows by refactoring core modules and server configurations — reducing response time from 700 ms to 100 ms and boosting user satisfaction by 30%.",
+                    "Enhanced push notification systems through batching and delivery optimization, cutting average delivery time from 10 s to 2 s.",
+                    "Collaborated with a cross-functional team of 15 engineers across global deployments.",
                     "Tech: Node.js, Golang, TypeScript, RDS, DynamoDB, Redis, SQS, Lambdas, CloudFormation, CloudWatch, Docker, Buildkite."
                 ]
             },
             {
                 "id": "4",
-                "dates": "July 2022 - November 2023",
-                "type": "Full Time",
-                "position": "Senior Software Engineer at Nimblebot - Remote",
+                "dates": "August 2023 — November 2023",
+                "type": "Residency · Singapore",
+                "company": "Antler",
+                "position": "Founder in Residence",
                 "bullets": [
-                    "Worked at Nimblebot, a premier provider of design and development services for industry leaders and government organizations (e.g., PayPal, Coursera, MIT, GitHub, HBO, Saudi Tourism Authority, Al Futtaim).",
-                    "Led the tech team as a product engineer; focused on creating products from a customer perspective.",
-                    "Crafted scalable architectures and built robust systems for web and mobile applications.",
-                    "Spearheaded the development of the Hyyp mobile application, a social impact network for web 3.0 users.",
-                    "Ensured the tech process aligns with user needs and market demands."
+                    "Entrepreneurial Resident at Antler (Singapore) — co-founded and built a financial AI application from the ground up.",
+                    "Focused on problem discovery, rapid prototyping, and validating product-market fit in a fast-paced startup environment."
                 ]
             },
             {
                 "id": "5",
-                "dates": "February 2019 - June 2022",
-                "type": "Full Time",
-                "position": "Software Engineer at Mission.dev - Remote",
+                "dates": "July 2022 — November 2023",
+                "type": "Full Time · Remote",
+                "company": "Nimblebot",
+                "position": "Senior Software Engineer",
                 "bullets": [
-                    "Mission 4: Engineered a robust biotech research SaaS platform that streamlined data analysis processes, reducing project turnaround times by 40% and enabling researchers to manage 250+ active projects concurrently with improved accuracy. Added new modules and features, and wrote unit tests for the existing codebase. Collaborated with a large team in an agile setup. Tech stack: Angular, C#, OData, Breeze, Jasmine, Azure DevOps. System used by thousands of people and hundreds of companies globally, impacting millions.",
-                    "Mission 3: Developed a SaaS security platform with integration support for HR data export. Tech stack: PHP, Symfony. Platform used by millions of users.",
-                    "Mission 2: Created a healthcare portal for families to track vitals, doctor appointments, prescriptions, etc. Tech stack: Vue.js, Jest, Node.js. Portal used by millions of families in Canada.",
-                    "Mission 1: Built a drag-and-drop form builder for doctors to create patient forms in hospitals. Tech stack: Vue.js, Node.js. Tool used daily by millions of doctors."
+                    "Nimblebot is a premier provider of design and development services for industry leaders and government organizations (PayPal, Coursera, MIT, GitHub, HBO, Saudi Tourism Authority, Al Futtaim).",
+                    "Led the tech team as a product engineer; focused on creating products from a customer perspective.",
+                    "Crafted scalable architectures and built robust systems for web and mobile applications.",
+                    "Spearheaded the development of the Hyyp mobile application — a social impact network for web 3.0 users."
                 ]
             },
             {
                 "id": "6",
-                "dates": "September 2016 - February 2019",
-                "type": "Full Time",
-                "position": "Software Engineer at ITWaly - Pakistan",
+                "dates": "February 2019 — June 2022",
+                "type": "Full Time · Remote",
+                "company": "Mission.dev",
+                "position": "Software Engineer",
                 "bullets": [
-                    "Developed and maintained scalable web applications using Node.js, Golang, and PHP.",
-                    "Built and optimized RESTful APIs, integrated Vue.js and Angular for the front end, and managed MySQL, PostgreSQL, and MongoDB databases.",
-                    "Deployed applications on AWS (EC2, S3, RDS, Lambda, CloudFront, DynamoDB) and implemented CI/CD pipelines with Jenkins and GitHub Actions.",
-                    "Ensured security best practices with OAuth 2.0, JWT, and RBAC while optimizing system performance.",
-                    "Followed Agile methodologies, conducted code reviews, and documented requirements, planning, and infrastructure."
+                    "Mission 4 — Biotech research SaaS: streamlined data analysis processes, reducing project turnaround times by 40% and enabling researchers to manage 250+ active projects concurrently. Tech: Angular, C#, OData, Breeze, Jasmine, Azure DevOps. Used by hundreds of companies globally.",
+                    "Mission 3 — SaaS security platform with integration support for HR data export. Tech: PHP, Symfony. Used by millions.",
+                    "Mission 2 — Healthcare portal for families to track vitals, appointments and prescriptions. Tech: Vue.js, Jest, Node.js. Used by millions of families in Canada.",
+                    "Mission 1 — Drag-and-drop form builder for doctors to create patient forms in hospitals. Tech: Vue.js, Node.js."
+                ]
+            },
+            {
+                "id": "7",
+                "dates": "2017 — 2019",
+                "type": "Co-Founder · Pakistan",
+                "company": "Spacesly",
+                "position": "Co-Founder & CTO",
+                "bullets": [
+                    "Co-founded and led engineering for a premier event-space booking marketplace in Pakistan. Archive lives at spacesly.online.",
+                    "Architected the platform from scratch and scaled the engineering team through incubations at the National Incubation Center (NIC) and the National Science and Technology Park (NSTP).",
+                    "Built, mentored and managed a 10-person cross-functional team across engineering, product design and QA — establishing agile workflows and CI/CD.",
+                    "Supported the business to 10M+ PKR in revenue with 100+ customers and 50+ active venue listings.",
+                    "Directed technical strategy until COVID-19 halted the live events industry; managed a calculated wind-down."
+                ]
+            },
+            {
+                "id": "8",
+                "dates": "September 2015 — February 2017",
+                "type": "Co-Founder · Pakistan",
+                "company": "ITWaly",
+                "position": "CEO & Co-Founder",
+                "bullets": [
+                    "Co-founded and led a remote software development agency right out of university — scaled the team to 12 cross-functional members delivering engineering services to US-based clients.",
+                    "Dual role as business executive and technical architect: managed client relationships, organizational growth and hands-on full-stack development.",
+                    "Built scalable web applications using Node.js, Golang, and PHP; integrated Vue.js / Angular frontends; managed MySQL, PostgreSQL, and MongoDB.",
+                    "Deployed secure applications on AWS (EC2, S3, RDS, Lambda) using CI/CD pipelines (Jenkins, GitHub Actions) and OAuth 2.0 / JWT authentication."
                 ]
             }
         ],

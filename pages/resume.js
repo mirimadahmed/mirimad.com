@@ -8,10 +8,10 @@ import Socials from "../components/Socials";
 import Button from "../components/Button";
 import { useTheme } from "next-themes";
 // Data
-import { name, showResume } from "../data/portfolio.json";
-import { resume } from "../data/portfolio.json";
 import data from "../data/portfolio.json";
+const { name, showResume, resume } = data;
 import { SITE_URL, DEFAULT_OG_IMAGE } from "../utils/seo";
+import { track } from "../utils/posthog";
 
 const Resume = () => {
   const router = useRouter();
@@ -67,81 +67,129 @@ const Resume = () => {
           <div className="mt-10 w-full flex flex-col items-center">
             <div
               className={`w-full ${
-                mount && theme.theme === "dark" ? "bg-slate-800" : "bg-gray-50"
-              } max-w-4xl p-20 mob:p-5 desktop:p-20 rounded-lg shadow-sm`}
+                mount && theme.theme === "dark" ? "bg-slate-800/60 backdrop-blur-sm border border-slate-700/50" : "bg-gray-50 border border-gray-100"
+              } max-w-4xl p-10 mob:p-6 desktop:p-16 rounded-2xl shadow-sm`}
             >
-              <h1 className="text-3xl font-bold">{name}</h1>
-              <p className="text-xl mt-5 font-medium">{resume.tagline}</p>
-              <p className="w-4/5 text-xl mt-5 opacity-50">{resume.description}</p>
-              <div className="mt-2">
+              <div className="flex flex-col tablet:flex-row tablet:items-start tablet:justify-between gap-4">
+                <div>
+                  <h1 className="text-3xl laptop:text-4xl font-bold tracking-tight">{name}</h1>
+                  <p className="text-lg laptop:text-xl mt-3 font-medium">{resume.tagline}</p>
+                </div>
+                <div className="flex flex-wrap gap-2 self-start">
+                  <a
+                    href="/MIR_IMAD_AHMED_RESUME.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() =>
+                      track("resume_pdf_viewed", {
+                        file: "MIR_IMAD_AHMED_RESUME.pdf",
+                      })
+                    }
+                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg border border-purple-500/40 text-purple-700 dark:text-purple-200 hover:bg-purple-500/10 transition-all link"
+                  >
+                    View PDF ↗
+                  </a>
+                  <a
+                    href="/MIR_IMAD_AHMED_RESUME.pdf"
+                    download
+                    onClick={() =>
+                      track("resume_pdf_downloaded", {
+                        file: "MIR_IMAD_AHMED_RESUME.pdf",
+                        location: "resume_page",
+                      })
+                    }
+                    className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:scale-105 active:scale-100 transition-all shadow-md shadow-purple-500/20 link"
+                  >
+                    ↓ Download PDF
+                  </a>
+                </div>
+              </div>
+              <p className="w-full tablet:w-4/5 text-base laptop:text-lg mt-5 opacity-70 leading-relaxed">{resume.description}</p>
+              <div className="mt-4">
                 <Socials />
               </div>
-              <div className="mt-5">
-                <h2 className="text-2xl font-bold">Experience</h2>
 
-                {resume.experiences.map(
-                  ({ id, dates, type, position, bullets }) => (
-                    <ProjectResume
-                      key={id}
-                      dates={dates}
-                      type={type}
-                      position={position}
-                      bullets={bullets}
-                    ></ProjectResume>
-                  )
-                )}
+              <div className="mt-10">
+                <h2 className="text-2xl font-bold mb-6">Experience</h2>
+                <div>
+                  {resume.experiences.map(
+                    (exp, idx) => (
+                      <ProjectResume
+                        key={exp.id}
+                        dates={exp.dates}
+                        type={exp.type}
+                        position={exp.position}
+                        company={exp.company}
+                        bullets={exp.bullets}
+                        current={exp.current}
+                        isLast={idx === resume.experiences.length - 1}
+                      />
+                    )
+                  )}
+                </div>
               </div>
-              <div className="mt-5">
-                <h2 className="text-2xl font-bold">Education</h2>
-                <div className="mt-2">
-                  <h3 className="text-lg">{resume.education.universityName}</h3>
-                  <p className="text-sm opacity-75">
+
+              <div className="mt-10">
+                <h2 className="text-2xl font-bold mb-4">Education</h2>
+                <div className="p-4 rounded-xl border border-gray-200 dark:border-slate-700">
+                  <h3 className="text-lg font-semibold">{resume.education.universityName}</h3>
+                  <p className="text-sm opacity-60 mt-1">
                     {resume.education.universityDate}
                   </p>
-                  <p className="text-sm mt-2 opacity-50">
+                  <p className="text-sm mt-2 opacity-70">
                     {resume.education.universityPara}
                   </p>
                 </div>
               </div>
-              <div className="mt-5">
-                <h2 className="text-2xl font-bold">Skills</h2>
-                <div className="flex mob:flex-col desktop:flex-row justify-between">
+
+              <div className="mt-10">
+                <h2 className="text-2xl font-bold mb-4">Skills</h2>
+                <div className="grid grid-cols-1 tablet:grid-cols-3 gap-6">
                   {resume.languages && (
-                    <div className="mt-2 mob:mt-5">
-                      <h3 className="text-lg">Languages</h3>
-                      <ul className="list-disc">
+                    <div>
+                      <h3 className="text-sm font-semibold uppercase tracking-wider opacity-60 mb-3">Languages</h3>
+                      <div className="flex flex-wrap gap-2">
                         {resume.languages.map((language, index) => (
-                          <li key={index} className="ml-5 py-2">
+                          <span
+                            key={index}
+                            className="text-xs font-medium px-3 py-1.5 rounded-full bg-purple-500/10 text-purple-700 dark:text-purple-300 border border-purple-500/20"
+                          >
                             {language}
-                          </li>
+                          </span>
                         ))}
-                      </ul>
+                      </div>
                     </div>
                   )}
 
                   {resume.frameworks && (
-                    <div className="mt-2 mob:mt-5">
-                      <h3 className="text-lg">Frameworks</h3>
-                      <ul className="list-disc">
+                    <div>
+                      <h3 className="text-sm font-semibold uppercase tracking-wider opacity-60 mb-3">Frameworks</h3>
+                      <div className="flex flex-wrap gap-2">
                         {resume.frameworks.map((framework, index) => (
-                          <li key={index} className="ml-5 py-2">
+                          <span
+                            key={index}
+                            className="text-xs font-medium px-3 py-1.5 rounded-full bg-pink-500/10 text-pink-700 dark:text-pink-300 border border-pink-500/20"
+                          >
                             {framework}
-                          </li>
+                          </span>
                         ))}
-                      </ul>
+                      </div>
                     </div>
                   )}
 
                   {resume.others && (
-                    <div className="mt-2 mob:mt-5">
-                      <h3 className="text-lg">Others</h3>
-                      <ul className="list-disc">
+                    <div>
+                      <h3 className="text-sm font-semibold uppercase tracking-wider opacity-60 mb-3">Cloud, AI & Tools</h3>
+                      <div className="flex flex-wrap gap-2">
                         {resume.others.map((other, index) => (
-                          <li key={index} className="ml-5 py-2">
+                          <span
+                            key={index}
+                            className="text-xs font-medium px-3 py-1.5 rounded-full bg-blue-500/10 text-blue-700 dark:text-blue-300 border border-blue-500/20"
+                          >
                             {other}
-                          </li>
+                          </span>
                         ))}
-                      </ul>
+                      </div>
                     </div>
                   )}
                 </div>

@@ -4,8 +4,14 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Button from "../Button";
+import { track } from "../../utils/posthog";
 // Local Data
 import data from "../../data/portfolio.json";
+
+const openContact = (location) => {
+  track("contact_clicked", { method: "cal_com", location });
+  window.open("https://cal.com/mirimad", "_blank", "noopener,noreferrer");
+};
 
 const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
   const router = useRouter();
@@ -20,8 +26,9 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
 
   return (
     <>
-      <Popover className="block tablet:hidden mt-5">
-        {({ open }) => (
+      <div className="block tablet:hidden mt-5">
+        <Popover>
+          {({ open }) => (
           <>
             <div className="flex items-center justify-between p-2 laptop:p-0">
               <Link href="/">
@@ -29,14 +36,17 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Link>
 
               <div className="flex items-center">
-                {data.darkMode && (
+                {mounted && data.darkMode && (
                   <Button
+                    aria-label="Toggle color theme"
                     onClick={() =>
                       setTheme(theme === "dark" ? "light" : "dark")
                     }
                   >
                     <img
                       className="h-6"
+                      alt=""
+                      aria-hidden="true"
                       src={`/images/${
                         theme === "dark" ? "moon.svg" : "sun.svg"
                       }`}
@@ -44,11 +54,15 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   </Button>
                 )}
 
-                <Popover.Button>
+                <Popover.Button aria-label={open ? "Close navigation menu" : "Open navigation menu"}>
                   <img
                     className="h-5"
+                    alt=""
+                    aria-hidden="true"
                     src={`/images/${
-                      !open
+                      !mounted
+                        ? "menu-white.svg"
+                        : !open
                         ? theme === "dark"
                           ? "menu-white.svg"
                           : "menu.svg"
@@ -80,7 +94,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:mirimadahmed@outlook.com")}
+                    onClick={() => openContact("header_nav")}
                   >
                     Contact
                   </Button>
@@ -103,7 +117,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   )}
 
                   <Button
-                    onClick={() => window.open("mailto:mirimadahmed@outlook.com")}
+                    onClick={() => openContact("header_nav")}
                   >
                     Contact
                   </Button>
@@ -112,12 +126,13 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
             </Popover.Panel>
           </>
         )}
-      </Popover>
-      <div
-        className={`mt-10 hidden flex-row items-center justify-between sticky ${
-          theme === "light" && "bg-white"
-        } dark:text-white top-0 z-10 tablet:flex`}
-      >
+        </Popover>
+      </div>
+      <div className="mt-10 hidden tablet:block sticky top-0 z-10 dark:text-white">
+        <div className={`absolute inset-y-0 -left-[50vw] -right-[50vw] backdrop-blur-md ${
+          theme === "light" ? "bg-white/70" : "bg-black/40"
+        } border-b border-black/5 dark:border-white/5`} />
+        <div className="relative flex flex-row items-center justify-between py-2">
         <Link href="/">
           <a className="font-medium cursor-pointer mob:p-2 laptop:p-0">{name}.</a>
         </Link>
@@ -136,15 +151,18 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:mirimadahmed@outlook.com")}>
+            <Button onClick={() => openContact("header_nav")}>
               Contact
             </Button>
             {mounted && theme && data.darkMode && (
               <Button
+                aria-label="Toggle color theme"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
                 <img
                   className="h-6"
+                  alt=""
+                  aria-hidden="true"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                 ></img>
               </Button>
@@ -165,22 +183,26 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
               </Button>
             )}
 
-            <Button onClick={() => window.open("mailto:mirimadahmed@outlook.com")}>
+            <Button onClick={() => openContact("header_nav")}>
               Contact
             </Button>
 
             {mounted && theme && data.darkMode && (
               <Button
+                aria-label="Toggle color theme"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               >
                 <img
                   className="h-6"
+                  alt=""
+                  aria-hidden="true"
                   src={`/images/${theme === "dark" ? "moon.svg" : "sun.svg"}`}
                 ></img>
               </Button>
             )}
           </div>
         )}
+        </div>
       </div>
     </>
   );
