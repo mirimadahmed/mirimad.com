@@ -3,15 +3,10 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { ThemeProvider } from "next-themes";
 import { GoogleAnalytics } from '@next/third-parties/google';
-import Intercom from '@intercom/messenger-js-sdk';
 import posthog, { initPostHog } from "../utils/posthog";
 
 const App = ({ Component, pageProps }) => {
   const router = useRouter();
-
-  Intercom({
-    app_id: 'xlmcjj4v',
-  });
 
   useEffect(() => {
     const ph = initPostHog();
