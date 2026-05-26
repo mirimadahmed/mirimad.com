@@ -129,9 +129,7 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
         </Popover>
       </div>
       <div className="mt-10 hidden tablet:block sticky top-0 z-10 dark:text-white">
-        <div className={`absolute inset-y-0 -left-[50vw] -right-[50vw] backdrop-blur-md ${
-          theme === "light" ? "bg-white/70" : "bg-black/40"
-        } border-b border-black/5 dark:border-white/5`} />
+        <div className="absolute inset-y-0 -left-[50vw] -right-[50vw] backdrop-blur-md bg-white/70 dark:bg-black/40 border-b border-black/5 dark:border-white/5" />
         <div className="relative flex flex-row items-center justify-between py-2">
         <Link href="/">
           <a className="font-medium cursor-pointer mob:p-2 laptop:p-0">{name}.</a>
