@@ -1,8 +1,128 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:wght@400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @import "./markdown.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Landing page (mirimad.com one-pager) theme ===== */
+:root {
+  --lp-bg: #f5efe6;
+  --lp-surface: #ffffff;
+  --lp-panel: rgba(255, 255, 255, 0.6);
+  --lp-fg: #091434;
+  --lp-fg-muted: rgba(9, 20, 52, 0.72);
+  --lp-line: rgba(9, 20, 52, 0.1);
+  --lp-accent: #7c5cff;
+  --lp-accent-soft: rgba(124, 92, 255, 0.12);
+  --lp-invert-bg: #091434;
+  --lp-invert-fg: #f5efe6;
+  --lp-invert-line: rgba(245, 239, 230, 0.15);
+}
+
+.dark {
+  --lp-bg: #0a0e1a;
+  --lp-surface: #11162a;
+  --lp-panel: rgba(255, 255, 255, 0.04);
+  --lp-fg: #f3efe7;
+  --lp-fg-muted: rgba(243, 239, 231, 0.72);
+  --lp-line: rgba(243, 239, 231, 0.12);
+  --lp-accent: #9b87ff;
+  --lp-accent-soft: rgba(155, 135, 255, 0.16);
+  --lp-invert-bg: #11162a;
+  --lp-invert-fg: #f3efe7;
+  --lp-invert-line: rgba(243, 239, 231, 0.12);
+}
+
+.lp-root {
+  background: var(--lp-bg);
+  color: var(--lp-fg);
+  font-family: "Poppins", "Inter", sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.lp-root h1,
+.lp-root h2,
+.lp-root h3,
+.lp-display {
+  font-family: "Koulen", "Inter", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.lp-accent {
+  color: var(--lp-accent);
+}
+.lp-muted {
+  color: var(--lp-fg-muted);
+}
+.lp-panel {
+  background: var(--lp-panel);
+  border: 1px solid var(--lp-line);
+}
+.lp-border {
+  border-color: var(--lp-line);
+}
+.lp-invert {
+  background: var(--lp-invert-bg);
+  color: var(--lp-invert-fg);
+}
+.lp-invert .lp-muted {
+  color: rgba(245, 239, 230, 0.8);
+}
+.lp-invert-border {
+  border-color: var(--lp-invert-line);
+}
+.lp-accent-bg {
+  background: var(--lp-accent);
+  color: #ffffff;
+}
+.lp-chip {
+  background: var(--lp-accent-soft);
+  color: var(--lp-accent);
+}
+.lp-link {
+  transition: color 0.2s ease;
+}
+.lp-link:hover {
+  color: var(--lp-accent);
+}
+.lp-hover-chip:hover {
+  background: var(--lp-accent-soft);
+  color: var(--lp-accent);
+}
+.lp-soft-chip {
+  background: rgba(9, 20, 52, 0.05);
+  color: var(--lp-fg);
+}
+.dark .lp-soft-chip {
+  background: rgba(243, 239, 231, 0.06);
+}
+.lp-glass {
+  background: color-mix(in srgb, var(--lp-bg) 82%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+@keyframes lp-wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(16deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.lp-wave {
+  display: inline-block;
+  transform-origin: 70% 70%;
+  animation: lp-wave 1.6s infinite ease-in-out;
+}
 
 * {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
