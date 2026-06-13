@@ -3,7 +3,6 @@ import Hero from "./Hero";
 import About from "./About";
 import Experience from "./Experience";
 import Skills from "./Skills";
-import Projects from "./Projects";
 import Lately from "./Lately";
 import Contact from "./Contact";
 import LandingFooter from "./LandingFooter";
@@ -32,7 +31,6 @@ const Landing = ({ data }) => {
         <About paragraphs={aboutParagraphs} />
         <Experience experiences={experiences} />
         <Skills groups={skillGroups} />
-        <Projects />
         <Lately
           videos={data.videos}
           youtubeUrl={(data.socials.find((s) => s.title.toLowerCase() === "youtube") || {}).link}

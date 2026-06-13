@@ -7,7 +7,7 @@ import data from "../../data/portfolio.json";
 const navLinks = [
   { label: "Work", href: "/#work" },
   { label: "About", href: "/#about" },
-  { label: "Experience", href: "/#experience" },
+  { label: "Skills", href: "/#skills" },
   { label: "Lately", href: "/#lately" },
   ...(data.showBlog ? [{ label: "Blog", href: "/blog" }] : []),
   { label: "Contact", href: "/#contact" },

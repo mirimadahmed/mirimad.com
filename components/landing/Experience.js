@@ -2,9 +2,9 @@ import Link from "next/link";
 
 const Experience = ({ experiences }) => {
   return (
-    <section id="experience" className="lp-invert scroll-mt-24 px-6 py-28 tablet:py-36">
+    <section id="work" className="lp-invert scroll-mt-24 px-6 py-28 tablet:py-36">
       <div className="mx-auto max-w-5xl">
-        <div className="lp-eyebrow mb-8">Experience · 2014—2026</div>
+        <div className="lp-eyebrow mb-8">Work · 2014—Today</div>
 
         <h2 className="lp-display text-[2.5rem] tablet:text-[4rem] laptop:text-[5rem]">
           A decade of shipping
