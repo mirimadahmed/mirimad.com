@@ -1,7 +1,7 @@
 {
     "name": "Mir Imad Ahmed",
     "headerTaglineOne": "Hello 👋",
-    "headerTaglineTwo": "I'm Mir Imad Ahmed — Senior Software Engineer",
+    "headerTaglineTwo": "I'm Mir Imad Ahmed — Member of Technical Staff",
     "headerTaglineThree": "building AI of the future",
     "headerTaglineFour": " at Microsoft AI · London, UK.",
     "showCursor": false,
@@ -49,29 +49,15 @@
         {
             "id": "v1",
             "platform": "youtube",
-            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "title": "Replace with a real YouTube video URL",
+            "url": "https://www.youtube.com/shorts/I6AUMFkXwaE",
+            "title": "CV says 10+ years experience — all I'm gonna read is the last two",
             "posted": "Jun 2026"
         },
         {
             "id": "v2",
             "platform": "youtube",
-            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-            "title": "Replace with another YouTube video URL",
-            "posted": "Jun 2026"
-        },
-        {
-            "id": "v3",
-            "platform": "tiktok",
-            "url": "https://www.tiktok.com/@mir_imad",
-            "title": "Replace with a TikTok URL (add thumbnail in /public/videos/)",
-            "posted": "Jun 2026"
-        },
-        {
-            "id": "v4",
-            "platform": "instagram",
-            "url": "https://www.instagram.com/mir_imad_dev/",
-            "title": "Replace with an Instagram Reel URL (add thumbnail in /public/videos/)",
+            "url": "https://www.youtube.com/shorts/oIHo44pXANQ",
+            "title": "How to get hired in the AI era",
             "posted": "Jun 2026"
         }
     ],
@@ -145,17 +131,17 @@
             "description": "Strategic tech leadership on demand. I help you build engineering teams, define technical roadmaps, and make critical architecture decisions to accelerate growth."
         }
     ],
-    "aboutpara": "I'm a Senior Software Engineer on the Super Intelligence team at Microsoft AI, building AI capabilities across the Microsoft ecosystem—models for text, image, audio, and video. Previously, on Intercom's AI Agent Team, I shipped large-scale conversational AI infrastructure for chat, email, and voice, powering 30,000+ businesses with autonomous, context-aware agents backed by LLMs and robust backends. Before that, at respond.io, I led AI agent messaging infrastructure supporting 13 million daily conversations. I care about scalable systems, reliability, and products that meaningfully advance how people use AI.",
+    "aboutpara": "I'm a Member of Technical Staff on the Super Intelligence team at Microsoft AI, building AI capabilities across the Microsoft ecosystem—models for text, image, audio, and video. Previously, on Intercom's AI Agent Team, I shipped large-scale conversational AI infrastructure for chat, email, and voice, powering 30,000+ businesses with autonomous, context-aware agents backed by LLMs and robust backends. Before that, at respond.io, I led AI agent messaging infrastructure supporting 13 million daily conversations. I care about scalable systems, reliability, and products that meaningfully advance how people use AI.",
     "resume": {
         "tagline": "👋 Building AI of the future at Microsoft AI.",
-        "description": "I'm a Senior Software Engineer on the Super Intelligence team at Microsoft AI, building AI capabilities across the Microsoft ecosystem—models for text, image, audio, and video. Previously, on Intercom's AI Agent Team, I shipped large-scale conversational AI infrastructure for chat, email, and voice, powering 30,000+ businesses. Before that, at respond.io, I led AI agent messaging infrastructure supporting 13 million daily conversations.",
+        "description": "I'm a Member of Technical Staff on the Super Intelligence team at Microsoft AI, building AI capabilities across the Microsoft ecosystem—models for text, image, audio, and video. Previously, on Intercom's AI Agent Team, I shipped large-scale conversational AI infrastructure for chat, email, and voice, powering 30,000+ businesses. Before that, at respond.io, I led AI agent messaging infrastructure supporting 13 million daily conversations.",
         "experiences": [
             {
                 "id": "1",
                 "dates": "April 2026 — Present",
                 "type": "Full Time · London, UK",
                 "company": "Microsoft",
-                "position": "Senior Software Engineer",
+                "position": "Member of Technical Staff",
                 "current": true,
                 "bullets": [
                     "Building AI capabilities for the Microsoft ecosystem as part of the Microsoft AI Labs squad (Super Intelligence team).",

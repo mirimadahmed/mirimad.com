@@ -7,10 +7,10 @@ import data from "../data/portfolio.json";
 import { SITE_URL, DEFAULT_OG_IMAGE, buildPersonJsonLd } from "../utils/seo";
 
 const HOME_TITLE =
-  "Mir Imad Ahmed | Senior Software Engineer, Microsoft AI — Portfolio";
+  "Mir Imad Ahmed | Member of Technical Staff, Microsoft AI — Portfolio";
 
 const HOME_DESCRIPTION =
-  "Mir Imad Ahmed is a Senior Software Engineer on the Super Intelligence team at Microsoft AI (London). Previously: Product Engineer on Intercom's AI Agent Team; Senior AI Engineer at respond.io (13M+ daily conversations). AI, LLMs, Ruby on Rails, Go, TypeScript, AWS.";
+  "Mir Imad Ahmed is a Member of Technical Staff on the Super Intelligence team at Microsoft AI (London). Previously: Product Engineer on Intercom's AI Agent Team; Senior AI Engineer at respond.io (13M+ daily conversations). AI, LLMs, Ruby on Rails, Go, TypeScript, AWS.";
 
 export default function Home() {
   return (

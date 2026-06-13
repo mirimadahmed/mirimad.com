@@ -51,12 +51,12 @@ const VideoCard = ({ video }) => {
         ) : (
           <div className="absolute inset-0 flex items-center justify-center bg-[color:var(--lp-fg)] p-6 text-center">
             <div>
-              <div className="lp-eyebrow" style={{ color: "rgba(247,245,242,0.65)" }}>
+              <div className="lp-eyebrow" style={{ color: "var(--lp-invert-fg-muted)" }}>
                 {platformLabel}
               </div>
               <div
                 className="lp-display mt-3 text-2xl leading-tight"
-                style={{ color: "var(--lp-bg)" }}
+                style={{ color: "var(--lp-invert-fg)" }}
               >
                 {video.title}
               </div>

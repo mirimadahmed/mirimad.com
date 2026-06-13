@@ -20,6 +20,8 @@ html {
   --lp-accent-soft: rgba(27, 27, 27, 0.06);
   --lp-invert-bg: #111111;
   --lp-invert-fg: #f7f5f2;
+  --lp-invert-fg-muted: rgba(247, 245, 242, 0.62);
+  --lp-invert-fg-soft: rgba(247, 245, 242, 0.85);
   --lp-invert-line: rgba(247, 245, 242, 0.14);
   --lp-dot: #4d9460;
 }
@@ -35,6 +37,8 @@ html {
   --lp-accent-soft: rgba(247, 245, 242, 0.06);
   --lp-invert-bg: #f7f5f2;
   --lp-invert-fg: #1b1b1b;
+  --lp-invert-fg-muted: rgba(27, 27, 27, 0.62);
+  --lp-invert-fg-soft: rgba(27, 27, 27, 0.85);
   --lp-invert-line: rgba(27, 27, 27, 0.12);
   --lp-dot: #7ab37c;
 }
@@ -66,7 +70,7 @@ html {
 }
 
 .lp-invert .lp-eyebrow {
-  color: rgba(247, 245, 242, 0.65);
+  color: var(--lp-invert-fg-muted);
 }
 
 .lp-mono {
@@ -99,10 +103,7 @@ html {
   color: var(--lp-invert-fg);
 }
 .lp-invert .lp-muted {
-  color: rgba(247, 245, 242, 0.62);
-}
-.dark .lp-invert .lp-muted {
-  color: rgba(27, 27, 27, 0.62);
+  color: var(--lp-invert-fg-muted);
 }
 .lp-invert-border {
   border-color: var(--lp-invert-line);

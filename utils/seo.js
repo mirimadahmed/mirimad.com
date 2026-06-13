@@ -18,7 +18,7 @@ export const buildPersonJsonLd = ({ name, description, sameAs }) =>
     description,
     url: SITE_URL,
     image: DEFAULT_OG_IMAGE,
-    jobTitle: "Senior Software Engineer",
+    jobTitle: "Member of Technical Staff",
     worksFor: {
       "@type": "Organization",
       name: "Microsoft",

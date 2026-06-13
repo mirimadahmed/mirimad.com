@@ -17,7 +17,7 @@ const Hero = ({ firstName, description }) => {
       <div className="mx-auto max-w-5xl">
         <div className="lp-eyebrow mb-8 flex items-center gap-2">
           <span aria-hidden className="lp-dot" />
-          Mir Imad · Senior Software Engineer · Microsoft AI
+          Mir Imad · Member of Technical Staff · Microsoft AI
         </div>
 
         <h1 className="lp-display text-[3rem] leading-[0.95] tablet:text-[5rem] laptop:text-[6.75rem]">

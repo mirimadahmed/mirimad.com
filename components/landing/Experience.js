@@ -22,7 +22,7 @@ const Experience = ({ experiences }) => {
                   {exp.company} · {exp.type}
                 </p>
               </div>
-              <ul className="space-y-3 text-base leading-relaxed laptop:text-lg" style={{ color: "rgba(247,245,242,0.85)" }}>
+              <ul className="space-y-3 text-base leading-relaxed laptop:text-lg" style={{ color: "var(--lp-invert-fg-soft)" }}>
                 {exp.bullets.map((b, i) => (
                   <li key={i} className="flex gap-3">
                     <span aria-hidden className="lp-dot mt-2 flex-shrink-0" />
