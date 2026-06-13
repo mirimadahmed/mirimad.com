@@ -1,82 +1,165 @@
-/* Markdown Styling */
-
-/* Markdown Container */
+/* Markdown Styling — Hive aesthetic */
 
 .markdown-class {
-  @apply mt-5 p-5;
+  font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--lp-fg);
+  font-size: 1.0625rem;
+  line-height: 1.75;
 }
 
-/* Headings */
+.markdown-class > * + * {
+  margin-top: 1.25rem;
+}
+
+.markdown-class h1,
+.markdown-class h2,
+.markdown-class h3,
+.markdown-class h4 {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-weight: 560;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-top: 2.5rem;
+}
 
 .markdown-class h1 {
-  @apply mt-5 text-3xl;
-}
-.markdown-class h2 {
-  @apply mt-5 text-2xl;
-}
-.markdown-class h3 {
-  @apply mt-5 text-xl;
-}
-.markdown-class h4 {
-  @apply mt-5 text-lg;
-}
-.markdown-class h5 {
-  @apply mt-5 text-base;
-}
-.markdown-class h6 {
-  @apply mt-5 text-sm;
+  font-size: 2.25rem;
+  letter-spacing: -0.04em;
 }
 
-.markdown-class a {
-  @apply opacity-80 font-bold text-base underline transition-all duration-200 ease-out hover:opacity-100;
+.markdown-class h2 {
+  font-size: 1.75rem;
+}
+
+.markdown-class h3 {
+  font-size: 1.375rem;
+}
+
+.markdown-class h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 
 .markdown-class p {
-  @apply mt-2 opacity-80 leading-7 font-normal text-base;
+  color: var(--lp-fg);
+  opacity: 0.85;
+}
+
+.markdown-class a {
+  color: var(--lp-fg);
+  text-decoration: underline;
+  text-decoration-color: var(--lp-line);
+  text-underline-offset: 4px;
+  transition: text-decoration-color 0.2s ease, opacity 0.2s ease;
+}
+
+.markdown-class a:hover {
+  text-decoration-color: var(--lp-fg);
 }
 
 .markdown-class strong {
-  @apply font-extrabold;
+  font-weight: 600;
+  color: var(--lp-fg);
+}
+
+.markdown-class em {
+  font-style: italic;
 }
 
 .markdown-class hr {
-  @apply my-5;
+  border: 0;
+  border-top: 1px solid var(--lp-line);
+  margin: 2.5rem 0;
 }
 
-
-
-/* Markdown Lists */
-
+.markdown-class ul,
 .markdown-class ol {
-  @apply mt-5 ml-5;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .markdown-class ol li {
-  @apply text-base opacity-80 list-decimal;
-}
-
-.markdown-class ul {
-  @apply mt-5 ml-5;
+  list-style: decimal;
+  opacity: 0.85;
 }
 
 .markdown-class ul li {
-  @apply text-base opacity-80 list-disc;
+  list-style: none;
+  position: relative;
+  padding-left: 1rem;
+  opacity: 0.85;
 }
 
-/* BlockQuote */
+.markdown-class ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 9999px;
+  background: var(--lp-dot);
+}
 
 .markdown-class blockquote {
-  @apply p-5 border-l-8 rounded-lg shadow-lg  text-sm bg-slate-200 text-black;
+  border-left: 2px solid var(--lp-line);
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  margin: 1.75rem 0;
+  font-style: italic;
+  color: var(--lp-fg-muted);
 }
 
 .markdown-class blockquote p {
-  @apply text-black text-sm;
+  margin: 0;
+  font-size: 1.0625rem;
 }
 
+.markdown-class code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.875em;
+  background: var(--lp-accent-soft);
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.35rem;
+  color: var(--lp-fg);
+}
 
+.markdown-class pre {
+  margin: 1.75rem 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--lp-line);
+}
 
-/* Image */
+.markdown-class pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.85rem;
+}
 
 .markdown-class img {
-  @apply max-h-96 w-full my-5 object-cover rounded-lg shadow-lg;
+  width: 100%;
+  margin: 1.75rem 0;
+  border-radius: 0.875rem;
+  border: 1px solid var(--lp-line);
+}
+
+.markdown-class table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.75rem 0;
+  font-size: 0.95rem;
+}
+
+.markdown-class th,
+.markdown-class td {
+  border-bottom: 1px solid var(--lp-line);
+  padding: 0.6rem 0.5rem;
+  text-align: left;
+}
+
+.markdown-class th {
+  font-weight: 600;
 }

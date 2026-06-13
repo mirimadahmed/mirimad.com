@@ -1,13 +1,16 @@
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import { useTheme } from "next-themes";
 import { track } from "../../utils/posthog";
+import data from "../../data/portfolio.json";
 
 const navLinks = [
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "Work", href: "/#work" },
+  { label: "About", href: "/#about" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Lately", href: "/#lately" },
+  ...(data.showBlog ? [{ label: "Blog", href: "/blog" }] : []),
+  { label: "Contact", href: "/#contact" },
 ];
 
 const openContact = (location) => () => {
@@ -67,25 +70,34 @@ const Nav = ({ name }) => {
             scrolled ? "shadow-[0_8px_30px_-12px_rgba(0,0,0,0.18)]" : ""
           }`}
         >
-          <a
-            href="#top"
-            className="lp-mono ml-2 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.18em]"
-            aria-label="Home"
-          >
-            <span aria-hidden className="lp-dot" />
-            {name}
-          </a>
+          <Link href="/" passHref>
+            <a
+              className="lp-mono ml-2 inline-flex items-center gap-2 text-sm font-medium uppercase tracking-[0.18em]"
+              aria-label="Home"
+            >
+              <span aria-hidden className="lp-dot" />
+              {name}
+            </a>
+          </Link>
 
           <nav className="hidden items-center gap-6 tablet:flex" aria-label="Primary">
-            {navLinks.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                className="lp-mono lp-muted lp-link text-xs uppercase tracking-[0.18em]"
-              >
-                {l.label}
-              </a>
-            ))}
+            {navLinks.map((l) =>
+              l.href.startsWith("/") && !l.href.startsWith("/#") ? (
+                <Link key={l.href} href={l.href} passHref>
+                  <a className="lp-mono lp-muted lp-link text-xs uppercase tracking-[0.18em]">
+                    {l.label}
+                  </a>
+                </Link>
+              ) : (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  className="lp-mono lp-muted lp-link text-xs uppercase tracking-[0.18em]"
+                >
+                  {l.label}
+                </a>
+              )
+            )}
           </nav>
 
           <div className="flex items-center gap-2">
@@ -117,16 +129,27 @@ const Nav = ({ name }) => {
             className="mt-2 flex flex-col gap-1 rounded-3xl border lp-border bg-[color:var(--lp-bg)]/95 p-3 backdrop-blur tablet:hidden"
             aria-label="Mobile"
           >
-            {navLinks.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setIsOpen(false)}
-                className="lp-mono rounded-2xl px-3 py-2 text-xs uppercase tracking-[0.18em] hover:bg-black/5 dark:hover:bg-white/10"
-              >
-                {l.label}
-              </a>
-            ))}
+            {navLinks.map((l) =>
+              l.href.startsWith("/") && !l.href.startsWith("/#") ? (
+                <Link key={l.href} href={l.href} passHref>
+                  <a
+                    onClick={() => setIsOpen(false)}
+                    className="lp-mono rounded-2xl px-3 py-2 text-xs uppercase tracking-[0.18em] hover:bg-black/5 dark:hover:bg-white/10"
+                  >
+                    {l.label}
+                  </a>
+                </Link>
+              ) : (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setIsOpen(false)}
+                  className="lp-mono rounded-2xl px-3 py-2 text-xs uppercase tracking-[0.18em] hover:bg-black/5 dark:hover:bg-white/10"
+                >
+                  {l.label}
+                </a>
+              )
+            )}
             <div className="flex items-center justify-end px-2 py-1">
               <ThemeToggle />
             </div>

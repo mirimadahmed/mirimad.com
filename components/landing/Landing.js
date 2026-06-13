@@ -4,6 +4,7 @@ import About from "./About";
 import Experience from "./Experience";
 import Skills from "./Skills";
 import Projects from "./Projects";
+import Lately from "./Lately";
 import Contact from "./Contact";
 import LandingFooter from "./LandingFooter";
 
@@ -32,9 +33,13 @@ const Landing = ({ data }) => {
         <Experience experiences={experiences} />
         <Skills groups={skillGroups} />
         <Projects />
+        <Lately
+          videos={data.videos}
+          youtubeUrl={(data.socials.find((s) => s.title.toLowerCase() === "youtube") || {}).link}
+        />
         <Contact socials={data.socials} />
       </main>
-      <LandingFooter name={data.name} />
+      <LandingFooter name={data.name} socials={data.socials} />
     </div>
   );
 };

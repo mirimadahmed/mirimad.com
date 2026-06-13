@@ -1,4 +1,6 @@
-const LandingFooter = ({ name }) => {
+import SocialIcons from "./SocialIcons";
+
+const LandingFooter = ({ name, socials = [] }) => {
   const year = new Date().getFullYear();
   return (
     <footer className="px-6 pt-16 pb-10">
@@ -9,7 +11,13 @@ const LandingFooter = ({ name }) => {
         >
           {name.split(" ").slice(0, 2).join(" ")}
         </div>
-        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t lp-border pt-6 tablet:flex-row tablet:items-center">
+        {socials.length > 0 && (
+          <div className="mt-10 flex flex-col items-start gap-4 tablet:flex-row tablet:items-center tablet:justify-between">
+            <div className="lp-eyebrow">Find me on the internet</div>
+            <SocialIcons socials={socials} location="footer" />
+          </div>
+        )}
+        <div className="mt-8 flex flex-col items-start justify-between gap-3 border-t lp-border pt-6 tablet:flex-row tablet:items-center">
           <p className="lp-mono lp-muted text-xs uppercase tracking-[0.18em]">
             © {year} {name}
           </p>

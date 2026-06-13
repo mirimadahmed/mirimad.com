@@ -5,7 +5,7 @@
     "headerTaglineThree": "building AI of the future",
     "headerTaglineFour": " at Microsoft AI · London, UK.",
     "showCursor": false,
-    "showBlog": false,
+    "showBlog": true,
     "darkMode": true,
     "showResume": true,
     "socials": [
@@ -20,6 +20,21 @@
             "link": "https://www.linkedin.com/in/mirimad/"
         },
         {
+            "id": "5",
+            "title": "YouTube",
+            "link": "https://www.youtube.com/@MirImadDev"
+        },
+        {
+            "id": "6",
+            "title": "Instagram",
+            "link": "https://www.instagram.com/mir_imad_dev/"
+        },
+        {
+            "id": "7",
+            "title": "TikTok",
+            "link": "https://www.tiktok.com/@mir_imad"
+        },
+        {
             "id": "3",
             "title": "Email",
             "link": "mailto:mirimadahmed@outlook.com"
@@ -28,6 +43,36 @@
             "id": "4",
             "title": "Phone",
             "link": "tel:+447303125888"
+        }
+    ],
+    "videos": [
+        {
+            "id": "v1",
+            "platform": "youtube",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "title": "Replace with a real YouTube video URL",
+            "posted": "Jun 2026"
+        },
+        {
+            "id": "v2",
+            "platform": "youtube",
+            "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "title": "Replace with another YouTube video URL",
+            "posted": "Jun 2026"
+        },
+        {
+            "id": "v3",
+            "platform": "tiktok",
+            "url": "https://www.tiktok.com/@mir_imad",
+            "title": "Replace with a TikTok URL (add thumbnail in /public/videos/)",
+            "posted": "Jun 2026"
+        },
+        {
+            "id": "v4",
+            "platform": "instagram",
+            "url": "https://www.instagram.com/mir_imad_dev/",
+            "title": "Replace with an Instagram Reel URL (add thumbnail in /public/videos/)",
+            "posted": "Jun 2026"
         }
     ],
     "projects": [
