@@ -1,12 +1,22 @@
 const LandingFooter = ({ name }) => {
   const year = new Date().getFullYear();
   return (
-    <footer className="lp-invert">
-      <div className="container mx-auto flex flex-col items-center justify-between gap-2 px-6 py-6 text-sm tablet:flex-row">
-        <p className="lp-muted">
-          © {year} {name}. All rights reserved.
-        </p>
-        <p className="lp-muted">Built with Next.js &amp; Tailwind CSS.</p>
+    <footer className="px-6 pt-16 pb-10">
+      <div className="mx-auto max-w-5xl">
+        <div
+          className="lp-display select-none whitespace-nowrap text-[14vw] leading-[0.82] tracking-[-0.07em]"
+          aria-hidden
+        >
+          {name.split(" ").slice(0, 2).join(" ")}
+        </div>
+        <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t lp-border pt-6 tablet:flex-row tablet:items-center">
+          <p className="lp-mono lp-muted text-xs uppercase tracking-[0.18em]">
+            © {year} {name}
+          </p>
+          <p className="lp-mono lp-muted text-xs uppercase tracking-[0.18em]">
+            Built with Next.js · Tailwind
+          </p>
+        </div>
       </div>
     </footer>
   );

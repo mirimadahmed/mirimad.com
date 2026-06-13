@@ -2,40 +2,40 @@ import Link from "next/link";
 
 const Experience = ({ experiences }) => {
   return (
-    <section id="experience" className="lp-invert scroll-mt-24 py-20">
-      <div className="container mx-auto px-6">
-        <h2 className="mb-12 text-5xl uppercase laptop:text-6xl">
-          Experi<span className="lp-accent">ence</span>
+    <section id="experience" className="lp-invert scroll-mt-24 px-6 py-28 tablet:py-36">
+      <div className="mx-auto max-w-5xl">
+        <div className="lp-eyebrow mb-8">Experience · 2014—2026</div>
+
+        <h2 className="lp-display text-[2.5rem] tablet:text-[4rem] laptop:text-[5rem]">
+          A decade of shipping
+          <br />
+          things that matter.
         </h2>
 
-        <div className="relative space-y-12 laptop:pl-10">
-          <span aria-hidden className="absolute left-2 top-2 bottom-2 hidden w-px laptop:block" style={{ background: "var(--lp-accent)", opacity: 0.4 }} />
+        <ol className="mt-16 divide-y" style={{ borderColor: "var(--lp-invert-line)" }}>
           {experiences.map((exp) => (
-            <article key={exp.id} className="relative">
-              <span aria-hidden className="absolute -left-10 top-2 hidden h-4 w-4 rounded-full laptop:block" style={{ background: "var(--lp-accent)" }} />
-              <header className="mb-3">
-                <h3 className="lp-accent text-2xl uppercase laptop:text-3xl">{exp.position}</h3>
-                <p className="lp-muted mt-1 text-sm">
-                  <span className="font-semibold" style={{ color: "var(--lp-invert-fg)" }}>
-                    {exp.company}
-                  </span>
-                  {" · "}
-                  {exp.dates}
-                  {" · "}
-                  {exp.type}
+            <li key={exp.id} className="grid gap-6 py-10 laptop:grid-cols-[1fr_2fr]">
+              <div>
+                <div className="lp-eyebrow">{exp.dates}</div>
+                <h3 className="lp-display mt-3 text-2xl laptop:text-3xl">{exp.position}</h3>
+                <p className="lp-muted lp-mono mt-2 text-xs uppercase tracking-[0.18em]">
+                  {exp.company} · {exp.type}
                 </p>
-              </header>
-              <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed laptop:text-base" style={{ color: "rgba(245,239,230,0.9)" }}>
+              </div>
+              <ul className="space-y-3 text-base leading-relaxed laptop:text-lg" style={{ color: "rgba(247,245,242,0.85)" }}>
                 {exp.bullets.map((b, i) => (
-                  <li key={i}>{b}</li>
+                  <li key={i} className="flex gap-3">
+                    <span aria-hidden className="lp-dot mt-2 flex-shrink-0" />
+                    <span>{b}</span>
+                  </li>
                 ))}
               </ul>
-            </article>
+            </li>
           ))}
-        </div>
+        </ol>
 
         <Link href="/resume">
-          <a className="link mt-12 inline-flex items-center gap-2 rounded-full border-2 lp-invert-border px-6 py-3 text-sm font-semibold uppercase tracking-wide transition-transform hover:scale-[1.03]">
+          <a className="lp-arrow-link lp-mono mt-12 inline-flex text-xs uppercase tracking-[0.18em]">
             See full résumé →
           </a>
         </Link>

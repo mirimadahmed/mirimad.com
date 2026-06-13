@@ -1,6 +1,7 @@
 import { track } from "../../utils/posthog";
 
-const displayValue = (link) => link.replace(/^mailto:/, "").replace(/^tel:/, "").replace(/^https?:\/\//, "").replace(/\/$/, "");
+const displayValue = (link) =>
+  link.replace(/^mailto:/, "").replace(/^tel:/, "").replace(/^https?:\/\//, "").replace(/\/$/, "");
 
 const Contact = ({ socials }) => {
   const contactLinks = [
@@ -14,45 +15,61 @@ const Contact = ({ socials }) => {
   };
 
   return (
-    <section id="contact" className="lp-invert scroll-mt-24 py-20">
-      <div className="container mx-auto grid gap-10 px-6 laptop:grid-cols-2">
-        <div>
-          <h2 className="text-5xl uppercase laptop:text-6xl">
-            Let&apos;s <span className="lp-accent">Talk</span>
-          </h2>
-          <p className="lp-muted mt-6 max-w-xl text-base leading-relaxed laptop:text-lg">
-            I&apos;m always happy to chat about AI, scalable systems, or building something ambitious together. Grab a slot
-            on my calendar or reach out directly — I&apos;ll get back to you.
-          </p>
-          <button
-            type="button"
-            onClick={bookCall}
-            className="link mt-8 inline-flex items-center gap-3 rounded-full lp-accent-bg px-6 py-3 text-sm font-semibold uppercase tracking-wide transition-transform hover:scale-[1.03]"
-          >
-            Book a Call →
-          </button>
-        </div>
+    <section id="contact" className="lp-invert scroll-mt-24 px-6 py-28 tablet:py-36">
+      <div className="mx-auto max-w-5xl">
+        <div className="lp-eyebrow mb-8">Contact · Always open</div>
 
-        <ul className="space-y-5">
-          {contactLinks.map((item) => (
-            <li key={item.label} className="border-b lp-invert-border pb-4 last:border-0">
-              <div className="lp-accent text-xs uppercase tracking-widest">{item.label}</div>
-              {item.href ? (
-                <a
-                  href={item.href}
-                  target={item.href.startsWith("http") ? "_blank" : undefined}
-                  rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  onClick={() => track("contact_link_clicked", { label: item.label })}
-                  className="link lp-link mt-1 inline-block text-lg"
-                >
-                  {item.value}
-                </a>
-              ) : (
-                <p className="mt-1 text-lg">{item.value}</p>
-              )}
-            </li>
-          ))}
-        </ul>
+        <h2 className="lp-display text-[2.5rem] tablet:text-[4rem] laptop:text-[5rem]">
+          Got an idea worth
+          <br />
+          building? Let&apos;s talk.
+        </h2>
+
+        <div className="mt-12 grid gap-12 laptop:grid-cols-[1.2fr_1fr]">
+          <div>
+            <p className="lp-muted max-w-xl text-lg leading-relaxed laptop:text-xl">
+              I&apos;m always happy to chat about AI, scalable systems, or building something
+              ambitious together. Grab a slot on my calendar or reach me directly.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-5">
+              <button
+                type="button"
+                onClick={bookCall}
+                className="lp-pill lp-pill-primary lp-mono text-xs uppercase tracking-[0.18em]"
+              >
+                Book a call
+              </button>
+              <a
+                href="mailto:mirimadahmed@outlook.com"
+                className="lp-arrow-link lp-mono text-xs uppercase tracking-[0.18em]"
+              >
+                Email instead →
+              </a>
+            </div>
+          </div>
+
+          <ul className="space-y-6">
+            {contactLinks.map((item) => (
+              <li key={item.label} className="border-t pt-4" style={{ borderColor: "var(--lp-invert-line)" }}>
+                <div className="lp-eyebrow">{item.label}</div>
+                {item.href ? (
+                  <a
+                    href={item.href}
+                    {...(item.href.startsWith("http")
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
+                    onClick={() => track("contact_link_clicked", { label: item.label })}
+                    className="lp-link mt-2 inline-block text-lg"
+                  >
+                    {item.value}
+                  </a>
+                ) : (
+                  <p className="mt-2 text-lg">{item.value}</p>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

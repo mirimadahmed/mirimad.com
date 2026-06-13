@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Nav from "./Nav";
 import Hero from "./Hero";
 import About from "./About";
@@ -8,44 +7,7 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import LandingFooter from "./LandingFooter";
 
-const splashName = "MIR IMAD";
-const typingDelayMs = 150;
-const splashDurationMs = 1900;
-
-const Splash = () => {
-  const [typed, setTyped] = useState("");
-
-  useEffect(() => {
-    if (typed.length === splashName.length) return;
-    const t = setTimeout(() => setTyped(splashName.slice(0, typed.length + 1)), typingDelayMs);
-    return () => clearTimeout(t);
-  }, [typed]);
-
-  return (
-    <div className="lp-root flex min-h-screen items-center justify-center">
-      <span
-        className="lp-display lp-accent text-6xl uppercase laptop:text-9xl"
-        role="status"
-        aria-live="polite"
-        aria-label="Mir Imad introduction"
-      >
-        {typed}
-        <span className="animate-pulse">|</span>
-      </span>
-    </div>
-  );
-};
-
 const Landing = ({ data }) => {
-  const [showSplash, setShowSplash] = useState(true);
-
-  useEffect(() => {
-    const t = setTimeout(() => setShowSplash(false), splashDurationMs);
-    return () => clearTimeout(t);
-  }, []);
-
-  if (showSplash) return <Splash />;
-
   const firstName = data.name.split(" ").slice(0, 2).join(" ");
 
   const aboutParagraphs = [

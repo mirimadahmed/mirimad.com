@@ -4,7 +4,7 @@
     "headerTaglineTwo": "I'm Mir Imad Ahmed — Senior Software Engineer",
     "headerTaglineThree": "building AI of the future",
     "headerTaglineFour": " at Microsoft AI · London, UK.",
-    "showCursor": true,
+    "showCursor": false,
     "showBlog": false,
     "darkMode": true,
     "showResume": true,

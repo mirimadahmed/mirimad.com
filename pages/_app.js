@@ -28,7 +28,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <>
       <GoogleAnalytics gaId="G-34RN3QNNBT" />
-      <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
+      <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
         <Component {...pageProps} />
       </ThemeProvider>
     </>

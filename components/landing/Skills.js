@@ -1,23 +1,29 @@
 const Skills = ({ groups }) => {
   return (
-    <section id="skills" className="container mx-auto scroll-mt-24 px-6 py-20">
-      <h2 className="mb-12 text-5xl uppercase laptop:text-6xl">
-        Skills &amp; <span className="lp-accent">Tools</span>
-      </h2>
+    <section id="skills" className="scroll-mt-24 px-6 py-28 tablet:py-36">
+      <div className="mx-auto max-w-5xl">
+        <div className="lp-eyebrow mb-8">Stack · Tools of the trade</div>
 
-      <div className="grid gap-6 tablet:grid-cols-2 laptop:grid-cols-3">
-        {groups.map((group) => (
-          <div key={group.title} className="rounded-2xl lp-panel p-6 shadow-sm">
-            <h3 className="lp-accent mb-4 text-2xl uppercase">{group.title}</h3>
-            <div className="flex flex-wrap gap-2">
-              {group.items.map((item) => (
-                <span key={item} className="lp-soft-chip rounded-full px-3 py-1 text-sm">
-                  {item}
-                </span>
-              ))}
+        <h2 className="lp-display text-[2.5rem] tablet:text-[4rem] laptop:text-[5rem]">
+          The toolkit behind
+          <br />
+          the work.
+        </h2>
+
+        <div className="mt-16 grid gap-10 tablet:grid-cols-3">
+          {groups.map((group) => (
+            <div key={group.title} className="border-t lp-border pt-6">
+              <h3 className="lp-eyebrow mb-5">{group.title}</h3>
+              <ul className="space-y-3">
+                {group.items.map((item) => (
+                  <li key={item} className="lp-mono text-base">
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

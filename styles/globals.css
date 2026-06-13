@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,39 +8,41 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===== Landing page (mirimad.com one-pager) theme ===== */
+/* ===== Landing page (mirimad.com one-pager) — Hive-style theme ===== */
 :root {
-  --lp-bg: #f5efe6;
+  --lp-bg: #f7f5f2;
   --lp-surface: #ffffff;
-  --lp-panel: rgba(255, 255, 255, 0.6);
-  --lp-fg: #091434;
-  --lp-fg-muted: rgba(9, 20, 52, 0.72);
-  --lp-line: rgba(9, 20, 52, 0.1);
-  --lp-accent: #7c5cff;
-  --lp-accent-soft: rgba(124, 92, 255, 0.12);
-  --lp-invert-bg: #091434;
-  --lp-invert-fg: #f5efe6;
-  --lp-invert-line: rgba(245, 239, 230, 0.15);
+  --lp-panel: #ffffff;
+  --lp-fg: #1b1b1b;
+  --lp-fg-muted: rgba(27, 27, 27, 0.62);
+  --lp-line: rgba(27, 27, 27, 0.1);
+  --lp-accent: #1b1b1b;
+  --lp-accent-soft: rgba(27, 27, 27, 0.06);
+  --lp-invert-bg: #111111;
+  --lp-invert-fg: #f7f5f2;
+  --lp-invert-line: rgba(247, 245, 242, 0.14);
+  --lp-dot: #4d9460;
 }
 
 .dark {
-  --lp-bg: #0a0e1a;
-  --lp-surface: #11162a;
-  --lp-panel: rgba(255, 255, 255, 0.04);
-  --lp-fg: #f3efe7;
-  --lp-fg-muted: rgba(243, 239, 231, 0.72);
-  --lp-line: rgba(243, 239, 231, 0.12);
-  --lp-accent: #9b87ff;
-  --lp-accent-soft: rgba(155, 135, 255, 0.16);
-  --lp-invert-bg: #11162a;
-  --lp-invert-fg: #f3efe7;
-  --lp-invert-line: rgba(243, 239, 231, 0.12);
+  --lp-bg: #0e0e0e;
+  --lp-surface: #171717;
+  --lp-panel: rgba(247, 245, 242, 0.04);
+  --lp-fg: #f7f5f2;
+  --lp-fg-muted: rgba(247, 245, 242, 0.62);
+  --lp-line: rgba(247, 245, 242, 0.12);
+  --lp-accent: #f7f5f2;
+  --lp-accent-soft: rgba(247, 245, 242, 0.06);
+  --lp-invert-bg: #f7f5f2;
+  --lp-invert-fg: #1b1b1b;
+  --lp-invert-line: rgba(27, 27, 27, 0.12);
+  --lp-dot: #7ab37c;
 }
 
 .lp-root {
   background: var(--lp-bg);
   color: var(--lp-fg);
-  font-family: "Poppins", "Inter", sans-serif;
+  font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
@@ -49,9 +50,35 @@ html {
 .lp-root h2,
 .lp-root h3,
 .lp-display {
-  font-family: "Koulen", "Inter", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.02em;
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-weight: 560;
+  letter-spacing: -0.05em;
+  line-height: 0.98;
+}
+
+.lp-eyebrow {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 500;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--lp-fg-muted);
+}
+
+.lp-invert .lp-eyebrow {
+  color: rgba(247, 245, 242, 0.65);
+}
+
+.lp-mono {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.lp-dot {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: var(--lp-dot);
 }
 
 .lp-accent {
@@ -72,65 +99,95 @@ html {
   color: var(--lp-invert-fg);
 }
 .lp-invert .lp-muted {
-  color: rgba(245, 239, 230, 0.8);
+  color: rgba(247, 245, 242, 0.62);
+}
+.dark .lp-invert .lp-muted {
+  color: rgba(27, 27, 27, 0.62);
 }
 .lp-invert-border {
   border-color: var(--lp-invert-line);
 }
 .lp-accent-bg {
-  background: var(--lp-accent);
-  color: #ffffff;
+  background: var(--lp-fg);
+  color: var(--lp-bg);
 }
-.lp-chip {
-  background: var(--lp-accent-soft);
-  color: var(--lp-accent);
+.lp-invert .lp-accent-bg {
+  background: var(--lp-invert-fg);
+  color: var(--lp-invert-bg);
+}
+.lp-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+.lp-pill:hover {
+  transform: translateY(-1px);
+}
+.lp-pill-primary {
+  background: var(--lp-fg);
+  color: var(--lp-bg);
+}
+.lp-invert .lp-pill-primary {
+  background: var(--lp-invert-fg);
+  color: var(--lp-invert-bg);
+}
+.lp-pill-ghost {
+  background: transparent;
+  color: var(--lp-fg);
+  border: 1px solid var(--lp-line);
+}
+.lp-invert .lp-pill-ghost {
+  color: var(--lp-invert-fg);
+  border-color: var(--lp-invert-line);
+}
+.lp-arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+  color: var(--lp-fg);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.lp-arrow-link:hover {
+  border-bottom-color: var(--lp-fg);
+}
+.lp-invert .lp-arrow-link {
+  color: var(--lp-invert-fg);
+}
+.lp-invert .lp-arrow-link:hover {
+  border-bottom-color: var(--lp-invert-fg);
 }
 .lp-link {
   transition: color 0.2s ease;
 }
 .lp-link:hover {
-  color: var(--lp-accent);
-}
-.lp-hover-chip:hover {
-  background: var(--lp-accent-soft);
-  color: var(--lp-accent);
-}
-.lp-soft-chip {
-  background: rgba(9, 20, 52, 0.05);
   color: var(--lp-fg);
 }
-.dark .lp-soft-chip {
-  background: rgba(243, 239, 231, 0.06);
+.lp-invert .lp-link:hover {
+  color: var(--lp-invert-fg);
+}
+.lp-soft-chip {
+  background: var(--lp-accent-soft);
+  color: var(--lp-fg);
 }
 .lp-glass {
-  background: color-mix(in srgb, var(--lp-bg) 82%, transparent);
-  backdrop-filter: blur(10px);
-}
-
-@keyframes lp-wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(16deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-.lp-wave {
-  display: inline-block;
-  transform-origin: 70% 70%;
-  animation: lp-wave 1.6s infinite ease-in-out;
+  background: color-mix(in srgb, var(--lp-bg) 78%, transparent);
+  backdrop-filter: blur(12px);
 }
 
 * {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 body {
   @apply dark:bg-black dark:text-white;
-  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  font-feature-settings: "ss01", "ss02", "ss03";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
@@ -141,8 +198,8 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-weight: 560;
+  letter-spacing: -0.03em;
 }
 
 .text-gradient {

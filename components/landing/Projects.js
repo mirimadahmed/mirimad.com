@@ -77,47 +77,67 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="work" className="container mx-auto scroll-mt-24 px-6 py-20">
-      <h2 className="mb-12 text-5xl uppercase laptop:text-6xl">
-        Selected <span className="lp-accent">Work</span>
-      </h2>
+    <section id="work" className="scroll-mt-24 px-6 py-28 tablet:py-36">
+      <div className="mx-auto max-w-5xl">
+        <div className="lp-eyebrow mb-8">Work · Selected</div>
 
-      <div className="grid gap-6 tablet:grid-cols-2">
-        {projects.map((project) => {
-          const Wrapper = project.url ? "a" : "div";
-          const wrapperProps = project.url
-            ? {
-                href: project.url,
-                target: "_blank",
-                rel: "noopener noreferrer",
-                onClick: () => track("project_clicked", { project: project.name }),
-                className: "link",
-              }
-            : {};
-          return (
-            <Wrapper key={project.name} {...wrapperProps}>
-              <article className="flex h-full flex-col rounded-2xl lp-panel p-6 shadow-sm transition-shadow hover:shadow-md">
-                <div className="mb-3">
-                  <p className="lp-accent text-xs uppercase tracking-widest">{project.category}</p>
-                  <h3 className="mt-1 text-3xl uppercase">{project.name}</h3>
-                </div>
-                <p className="lp-muted mb-4 text-base leading-relaxed">{project.description}</p>
-                <ul className="lp-muted mb-5 list-disc space-y-1 pl-5 text-sm">
-                  {project.highlights.map((h, i) => (
-                    <li key={i}>{h}</li>
-                  ))}
-                </ul>
-                <div className="mt-auto flex flex-wrap gap-2">
-                  {project.stack.map((tech) => (
-                    <span key={tech} className="lp-soft-chip rounded-full px-3 py-1 text-xs">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </article>
-            </Wrapper>
-          );
-        })}
+        <h2 className="lp-display text-[2.5rem] tablet:text-[4rem] laptop:text-[5rem]">
+          Where the ideas
+          <br />
+          have shipped.
+        </h2>
+
+        <ul className="mt-16 divide-y lp-border" style={{ borderColor: "var(--lp-line)" }}>
+          {projects.map((project) => {
+            const Wrapper = project.url ? "a" : "div";
+            const wrapperProps = project.url
+              ? {
+                  href: project.url,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  onClick: () => track("project_clicked", { project: project.name }),
+                  className: "link group block",
+                }
+              : { className: "block" };
+            return (
+              <li key={project.name} className="border-t lp-border first:border-t-0">
+                <Wrapper {...wrapperProps}>
+                  <article className="grid gap-6 py-10 laptop:grid-cols-[1fr_2fr] laptop:gap-10">
+                    <div>
+                      <div className="lp-eyebrow">{project.category}</div>
+                      <h3 className="lp-display mt-3 text-3xl laptop:text-4xl">
+                        {project.name}
+                        {project.url ? (
+                          <span className="lp-mono ml-2 align-middle text-base opacity-0 transition-opacity group-hover:opacity-100">
+                            →
+                          </span>
+                        ) : null}
+                      </h3>
+                    </div>
+                    <div>
+                      <p className="lp-muted text-base leading-relaxed laptop:text-lg">
+                        {project.description}
+                      </p>
+                      <ul className="mt-4 space-y-2 text-sm leading-relaxed laptop:text-base">
+                        {project.highlights.map((h, i) => (
+                          <li key={i} className="flex gap-3">
+                            <span aria-hidden className="lp-dot mt-2 flex-shrink-0" />
+                            <span className="lp-muted">{h}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="lp-mono lp-muted mt-5 flex flex-wrap gap-x-4 gap-y-2 text-xs uppercase tracking-[0.15em]">
+                        {project.stack.map((tech) => (
+                          <span key={tech}>{tech}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </article>
+                </Wrapper>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );
